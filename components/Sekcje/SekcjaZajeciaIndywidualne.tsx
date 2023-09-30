@@ -1,6 +1,5 @@
 import { SectionDaneAnd, TrenerDane, ZajeciaIndywidualneDane } from "@/Data/Interface"
 import { Badge, Card, Center, Container, Divider, Group, Paper, SimpleGrid, Text, Title, rem, useMantineTheme } from "@mantine/core"
-import { Fitures, Section } from "../Basic"
 import { Sekcja } from "./Sekcja"
 import { IconCookie, IconGauge, IconUser } from "@tabler/icons-react"
 import { Cennik } from "../Cennik"

@@ -1,14 +1,9 @@
 'use client';
-import { Welcome } from '../components/dziwne/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle';
-import { HeaderMegaMenu } from '@/components/dziwne/Nav';
-import { StronaTytulowa } from '@/components/dziwne/StronaTytulowa';
-import { Usluga } from '@/components/dziwne/Usluga';
 import { Shell } from '@/components/Shell';
 import { Tytul } from '@/components/Sekcje/Tytul';
 import { SekcjaUslugi } from '@/components/Sekcje/SekcjaUslugi';
-import { SekcjaZajeciaIndywidualne } from '@/components/Sekcje/ZajeciaIndywidualne';
-import { SekcjaZajeciaGrupowe } from '@/components/Sekcje/ZajeciaGrupowe';
+import { SekcjaZajeciaIndywidualne } from '@/components/Sekcje/SekcjaZajeciaIndywidualne';
+import { SekcjaZajeciaGrupowe } from '@/components/Sekcje/SekcjaZajeciaGrupowe';
 import { Kontakt } from '@/components/Sekcje/Kontakt';
 import { data } from '@/Data/data';
 
