@@ -48,8 +48,8 @@ export const Tytul = ({ data }: { data: HeaderDane }) => (
 export function Feature({ icon: Icon, title, description }: FitureDane) {
     return (
         <div>
-            <ThemeIcon variant="light" size={60} radius={40}>
-                <Icon />
+            <ThemeIcon variant="light" size={80} radius={40}>
+                <Icon style={{ width: '80%', height: 'auto' }} />
             </ThemeIcon>
             <Text size="xl" mt="sm" mb={7}>
                 {title}
