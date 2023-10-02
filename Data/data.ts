@@ -112,15 +112,13 @@ export const data: Site = {
                 },
 
                 {
-                    title: 'Siłownia + Sala CROSS',
+                    title: 'Open',
                     description: 'Duża, bogato wyposażona sala, która umożliwia wykonanie specjalistycznych treningów: sztuki walki, kalistenika, gimnastyka, trening funkcjonalny. Sala może być rezerwowana, dlatego przed planowany treningiem należy sprawdzić jej dostępność w kalendarzu. ',
-                    videoSrc: 'crossfit.mp4',
+                    videoSrc: 'SilowniaFilmy/Cross.mp4',
                     cennik: [
                         {
                             nazwa: 'CROSS jednorazowy', cena: '35 zł', wlasciwosci: [
                                 { icon: IconDoorEnter, text: 'jednorazowa wizyta' },
-                                { icon: IconAccessible, text: 'dostęp do siłowni' },
-                                { icon: IconAccessible, text: 'dostęp do sali cross' },
                             ],
                         },
                         {
@@ -128,8 +126,6 @@ export const data: Site = {
                                 { icon: IconCalendar, text: 'ważny 1 miesiąc' },
                                 { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                                 { icon: Icon24Hours, text: 'całodobowy dostęp' },
-                                { icon: IconAccessible, text: 'dostęp do siłowni' },
-                                { icon: IconAccessible, text: 'dostęp do sali cross' },
                             ],
                         },
                         {
@@ -137,38 +133,29 @@ export const data: Site = {
                                 { icon: IconCalendar, text: 'ważny 2 miesiąc' },
                                 { icon: IconDoorEnter, text: '10 wejść' },
                                 { icon: Icon24Hours, text: 'całodobowy dostęp' },
-                                { icon: IconAccessible, text: 'dostęp do siłowni' },
-                                { icon: IconAccessible, text: 'dostęp do sali cross' },
                             ],
                         },
                         {
                             imgSrc: 'multisport.png', nazwa: '', cena: '+ 10 zł', wlasciwosci: [
                                 { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
-                                { icon: IconAccessible, text: 'dostęp do siłowni' },
-                                { icon: IconAccessible, text: 'dostęp do sali cross' },
                             ]
                         },
                         {
                             imgSrc: 'medicover.png', nazwa: '', cena: '+ 10 zł', wlasciwosci: [
                                 { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
-                                { icon: IconAccessible, text: 'dostęp do siłowni' },
-                                { icon: IconAccessible, text: 'dostęp do sali cross' },
                             ]
                         },
                         {
                             imgSrc: 'fitProfit.png', nazwa: '', cena: '+ 10 zł', wlasciwosci: [
                                 { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
-                                { icon: IconAccessible, text: 'dostęp do siłowni' },
-                                { icon: IconAccessible, text: 'dostęp do sali cross' },
                             ]
                         },
-
                     ]
                 },
                 {
                     title: 'Badminton',
                     description: 'Pełnowymiarowy kort do gry w badmintona ',
-                    videoSrc: 'crossfit.mp4',
+                    videoSrc: 'SilowniaFilmy/Cross.mp4',
                     cennik: [
                         {
                             nazwa: 'BADMINTON godzina', cena: '60 zł', wlasciwosci: [{
@@ -181,7 +168,7 @@ export const data: Site = {
                 {
                     title: 'Sauna',
                     description: 'Sauna sucha z leżakownią i prysznicem do 6 osób. Cena za wynajęcia całego pomieszczenia. Prosimy o rezerwacja przynajmniej 1 godzinę przed planowaną wizytą.',
-                    videoSrc: 'sauna.mp4',
+                    videoSrc: 'SilowniaFilmy/Sauna.mp4',
                     cennik: [
                         {
                             nazwa: 'SAUNA godzina', cena: '60', wlasciwosci: [{
@@ -199,7 +186,7 @@ export const data: Site = {
                 {
                     title: 'Masaż',
                     description: 'Różne rodzaje masaży: klasyczny, sportowy, próżniowy, relaksacyjny. Zapraszamy do zapisów w recepcji, lub telefonicznie.',
-                    videoSrc: 'masaz.mp4',
+                    videoSrc: 'SilowniaFilmy/Masaz.mp4',
                     cennik: [
                         { nazwa: 'Masaż', cena: 'od 120', wlasciwosci: [{ icon: IconVerifed, text: '' }] },
                     ]
@@ -207,7 +194,7 @@ export const data: Site = {
                 {
                     title: 'Bufet i sklep z odżywkami',
                     description: 'W sklepie znajdziesz, napoje, odżywki, suplementy diety, odzież sportową, akcesoria treningowe, natomiast bufet serwuje koktajle proteinowe i kawę.',
-                    videoSrc: 'bufet.mp4',
+                    videoSrc: 'SilowniaFilmy/Bufet.mp4',
                     cennik: []
                 }
 

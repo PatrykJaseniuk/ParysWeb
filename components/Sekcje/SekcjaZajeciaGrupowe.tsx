@@ -48,7 +48,7 @@ const Kalendaz = ({ data }: { data: string }) => {
             <Modal fullScreen opened={opened} onClose={close} title="Kalendarz" centered  >
                 <iframe src={data} style={{ width: '100%', height: '75vh' }} ></iframe>
             </Modal >
-            <Button onClick={open}>Kalendarz</Button>
+            <Button variant="light" onClick={open}>Kalendarz</Button>
         </>
     )
 }

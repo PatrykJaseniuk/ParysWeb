@@ -2,12 +2,18 @@ import { CenaDane } from "@/Data/Interface";
 import { IconTime } from "@/Icons/IconTime";
 import { IconVerifed } from "@/Icons/IconVerified";
 import { Embla, useAnimationOffsetEffect, Carousel } from "@mantine/carousel";
-import { Modal, Card, Title, Divider, List, ListItem, Button, Image, Text } from "@mantine/core";
+import { Modal, Card, Title, Divider, List, ListItem, Button, Image, Text, useMantineColorScheme, useMantineTheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconInfinity, IconCalendar } from "@tabler/icons-react";
 import { useState } from "react";
 
 export const Cennik = ({ data }: { data: CenaDane[] }) => {
+
+
+    const colorSheme = useMantineColorScheme()
+    const theme = useMantineTheme()
+    const color = colorSheme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[9]
+
     const [opened, { open, close }] = useDisclosure(false);
 
     // problem with carusel in modal
@@ -38,7 +44,7 @@ export const Cennik = ({ data }: { data: CenaDane[] }) => {
                                     </Card.Section>
                                 }
                                 <Title order={4}>
-                                    <Text ta={'center'} inherit size="xl" variant="gradient" gradient={{ from: 'pink', to: 'blue' }} >
+                                    <Text ta={'center'} inherit size="xl" variant="gradient" gradient={{ from: color, to: 'red' }} >
                                         {cena.nazwa}
                                     </Text>
                                 </Title>
@@ -47,16 +53,12 @@ export const Cennik = ({ data }: { data: CenaDane[] }) => {
 
                                 <Divider my={"xs"} />
                                 <Title order={3}>
-                                    <Text ta={'center'} inherit size="xl" variant="gradient" gradient={{ from: 'pink', to: 'blue' }} >
+                                    <Text ta={'center'} inherit size="xl" variant="gradient" gradient={{ from: 'red', to: color }} >
                                         {(cena.cena)}
                                     </Text>
                                 </Title>
 
                                 <List
-                                    icon={<><IconInfinity /><IconCalendar /><IconTime /><IconVerifed
-                                        style={{ width: '2rem', fill: 'pink' }}
-                                    /></>
-                                    }
                                     spacing={'md'}
                                 >
                                     {cena.wlasciwosci.map((wlasciwosc, index) => {
@@ -64,7 +66,7 @@ export const Cennik = ({ data }: { data: CenaDane[] }) => {
                                             <ListItem key={index}
                                                 icon={<div> <wlasciwosc.icon /> </div>}>
                                                 {/* zmniejsz odlogłość miedzy liniami */}
-                                                <Text lh={'sm'} size="xl" key={index}>
+                                                <Text lh={'sm'} key={index}>
                                                     {wlasciwosc.text}
                                                 </Text>
                                             </ListItem>
@@ -76,7 +78,7 @@ export const Cennik = ({ data }: { data: CenaDane[] }) => {
                     )}
                 </Carousel>
             </Modal >
-            <Button onClick={open}>CENNIK</Button>
+            <Button variant="light" onClick={open}>CENNIK</Button>
         </>
     )
 }

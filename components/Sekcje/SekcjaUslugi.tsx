@@ -11,6 +11,7 @@ import { IconVerifed } from "@/Icons/IconVerified"
 import { IconTime } from "@/Icons/IconTime"
 import { IconBarbell, IconCalendar, IconHeartPlus, IconHeartbeat, IconInfinity, IconMassage, IconRings, IconStretching, IconStretching2, IconTreadmill, IconWaveSquare, IconWeight } from "@tabler/icons-react"
 import { Cennik } from "../Cennik"
+import { IconGymStation } from "@/IconsParys/IconGymStation"
 
 export const SekcjaUslugi = ({ data }: { data: SectionDaneAnd<UslugiDane> }) => {
     return (
@@ -47,7 +48,15 @@ const Usluga = ({ data }: { data: UslugaDane }) => {
     )
 }
 
+
+
 const UslugaSilownia = ({ data }: { data: UslugaDane }) => {
+    const Icons = [
+        { icon: IconBarbell, text: 'WOLNE CIĘŻARY' },
+        { icon: IconGymStation, text: 'MASZYNY ZE STOSEM' },
+        { icon: IconTreadmill, text: 'CARDIO' },
+        { icon: IconStretching, text: 'STREFA FUNKCJONALNA' },
+    ]
 
     return (
         <Container size={"xl"}>
@@ -59,23 +68,22 @@ const UslugaSilownia = ({ data }: { data: UslugaDane }) => {
                         </Text>
                     </Title>
                     <Text>
-                        W ramach tej usługi możesz korzystać ze stref:
                     </Text>
-                    <List>
-                        <List.Item icon={<IconBarbell />}>
-                            Wolnych ciężarów
-                        </List.Item>
-                        <List.Item icon={<IconWeight />}>
-                            Maszyn ze stosem
-                        </List.Item>
+                    <List spacing={'md'}>
+                        {Icons.map((item, index) => (
+                            <List.Item
+                                key={index}
+                                icon={<ThemeIcon
+                                    variant="default"
+                                    size={80}
+                                    radius={50}>
+                                    {<item.icon style={{ width: '70%', height: 'auto' }}
+                                    />}
+                                </ThemeIcon>}>
 
-                        <List.Item icon={<IconTreadmill />}>
-                            Cardio
-                        </List.Item>
-
-                        <List.Item icon={<IconStretching />}>
-                            Treningów funkcjonalnych
-                        </List.Item>
+                                <Text size="lg"> {item.text}</Text>
+                            </List.Item>
+                        ))}
                     </List>
                     {data.cennik.length > 0 && <Cennik data={data.cennik} />}
                 </Stack>
@@ -83,12 +91,12 @@ const UslugaSilownia = ({ data }: { data: UslugaDane }) => {
             </SimpleGrid>
             <Divider size={'xl'} m={"xl"} />
         </Container>
-
     )
 }
 
-const UslugaOpen = ({ data }: { data: UslugaDane }) => {
 
+
+const UslugaOpen = ({ data }: { data: UslugaDane }) => {
     return (
         <Container size={"xl"}>
             <SimpleGrid mt={'xl'} cols={{ sm: 1, md: 2 }}>
@@ -99,23 +107,35 @@ const UslugaOpen = ({ data }: { data: UslugaDane }) => {
                         </Text>
                     </Title>
                     <Text>
-                        W ramach tej usługi możesz korzystać z:
-                    </Text>
-                    <List spacing={'xl'}>
 
-                        <List.Item icon={<ThemeIcon variant="light" size={100} radius={50}>
-                            <SimpleGrid cols={2}><IconWeight /><IconBarbell /><IconTreadmill /><IconStretching /></SimpleGrid>
-                        </ThemeIcon>}>
-                            <Text size="xl">Siłowni</Text>
+                    </Text>
+
+                    <List spacing={'md'}>
+                        <List.Item
+                            icon={<ThemeIcon variant="default" size={100} radius={50}>
+                                <Flex style={{ width: '80%' }} wrap={'wrap'}>
+                                    <IconWeight style={{ height: 'auto', width: '45%' }} />
+                                    <IconBarbell style={{ height: 'auto', width: '45%' }} />
+                                    <IconTreadmill style={{ height: 'auto', width: '45%' }} />
+                                    <IconStretching style={{ height: 'auto', width: '45%' }} />
+                                </Flex>
+                            </ThemeIcon>}
+                        >
+                            <Text size="lg">SIŁOWNIA</Text>
                         </List.Item>
                         <List.Item icon={
-                            <ThemeIcon variant="light" size={100} radius={50}><IconRings width={'80%'} height={'auto'} /></ThemeIcon>
+                            <ThemeIcon variant="default" size={100} radius={50}><IconRings width={'80%'} height={'auto'} /></ThemeIcon>
                         }>
-                            Sali Cross
+                            <Text size="lg">SALA CROSS</Text>
                         </List.Item>
-
-                        <List.Item icon={<><ThemeIcon variant="light" size={100} radius={50}><IconMassage /><IconWaveSquare /></ThemeIcon></>}>
-                            Rollmasażu i platformy wibrującej
+                        <List.Item
+                            icon={<ThemeIcon
+                                variant="default" size={100} radius={50}>
+                                <IconMassage style={{ width: '45%', height: 'auto' }} />
+                                <IconWaveSquare style={{ width: '45%', height: 'auto' }} />
+                            </ThemeIcon>}
+                        >
+                            <Text size="1.5rem">ROLLMASAŻ I PLATFORMA WIBRUJĄCA</Text>
                         </List.Item>
                     </List>
                     {data.cennik.length > 0 && <Cennik data={data.cennik} />}
@@ -138,30 +158,26 @@ const Video = ({ src }: { src: string }) => {
     });
 
     return (
-        <Box
+        <Box style={{ visibility: entry?.isIntersecting ? 'visible' : 'hidden' }}
             ref={ref}>
-            <Transition
+            {/* <Transition
                 keepMounted
                 mounted={entry?.isIntersecting ? true : false}
                 transition="scale-x"
                 duration={800}
                 timingFunction="ease"
-            >
-                {(styles) => {
-                    styles.visibility = styles.display == 'none' ? 'hidden' : 'visible'
-                    styles.display = ''
-                    return <div style={{ ...styles }}>
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            style={{ width: '100%', objectFit: 'cover', borderRadius: '10%' }}
-                            src={src}
-                        />
-                    </div>
-                }
-                }
-            </Transition>
+            > */}
+            <video
+                autoPlay
+                loop
+                muted
+                style={{ width: '100%', objectFit: 'cover', borderRadius: '10%' }}
+                src={src}
+            />
+
+
+
+            {/* </Transition> */}
         </Box>
 
 

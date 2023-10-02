@@ -1,6 +1,6 @@
 'use client';
 
-import { createTheme, rem } from '@mantine/core';
+import { createTheme, rem, } from '@mantine/core';
 
 export const theme = createTheme({
   headings: {
@@ -30,6 +30,11 @@ export const theme = createTheme({
       "#cb171d",
       "#b50e19",
       "#9f0012"
-    ]
+    ],
+  },
+  primaryColor: 'red',
+  fontSizes: {
+    xl: '3rem',
+    lg: '1.5rem',
   }
 });
