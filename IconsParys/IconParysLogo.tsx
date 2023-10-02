@@ -1,10 +1,12 @@
-import { useMantineColorScheme } from "@mantine/core";
+import { useMantineColorScheme, useMantineTheme } from "@mantine/core";
 
 export const IconParysLogo = () => {
 
     const { colorScheme } = useMantineColorScheme();
-    const black = '2B2A29';
-    const white = 'EBECEC'
+    const theme = useMantineTheme();
+    const black = theme.black
+    const white = theme.white
+    const red = colorScheme == 'light' ? theme.colors.red[6] : theme.colors.red[8]
 
     const color1 = colorScheme == 'light' ? white : black;
     const color2 = colorScheme == 'light' ? black : white;
@@ -18,17 +20,17 @@ viewBox="4000 9000 13000 11100 "
  <style type="text/css">
  <![CDATA[
  .str2 {
-     stroke: #${color1};
+     stroke: ${color1};
      stroke-width: 7.62
  }
 
  .str1 {
-     stroke: #${color1};
+     stroke: ${color1};
      stroke-width: 7.62
  }
 
  .str0 {
-     stroke: #${color1};
+     stroke: ${color1};
      stroke-width: 151.45;
      stroke-linecap: round;
      stroke-linejoin: round
@@ -40,7 +42,7 @@ viewBox="4000 9000 13000 11100 "
  }
 
  .fil4 {
-     fill: #${color2}
+     fill: ${color2}
  }
 
  .fil6 {
@@ -48,7 +50,7 @@ viewBox="4000 9000 13000 11100 "
  }
 
  .fil5 {
-     fill: #E31E24
+     fill: ${red}
  }
 
  .fil3 {
@@ -56,12 +58,12 @@ viewBox="4000 9000 13000 11100 "
  }
 
  .fil1 {
-     fill: #${color2};
+     fill: ${color2};
      fill-rule: nonzero
  }
 
  .fil2 {
-     fill: #${color1}
+     fill: ${color1}
  }
  ]]>
 </style>

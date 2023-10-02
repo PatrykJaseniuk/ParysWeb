@@ -1,9 +1,10 @@
-import { useMantineColorScheme } from "@mantine/core";
+import { useMantineColorScheme, useMantineTheme } from "@mantine/core";
 
 export const IconParysLogoMini = () => {
 
     const { colorScheme } = useMantineColorScheme();
-    const black = '2B2A29';
+    const theme = useMantineTheme();
+    const black = theme.colors.red[5]
     const white = 'EBECEC'
 
     const color1 = colorScheme == 'light' ? white : black;
