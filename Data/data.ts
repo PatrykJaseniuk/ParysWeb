@@ -207,10 +207,10 @@ export const data: Site = {
             title: 'Trener osobisty',
         },
         zawartosc: {
-            description: 'Trener osobisty to osoba zajmująca się układaniem indywidualnego zestawu ćwiczeń oraz uczeniem ich prawidłowego wykonywania. Jego rolą jest również motywacja klienta i monitorowanie jego wyników. Współpracując z trenerem personalnym można znacząco skrócić czas niezbędny do uzyskania określonego celu sylwetkowego, sportowego, lub zdrowotnego. Zapraszamy do zapisów w recepcji, lub telefonicznie.',
+            description: 'Trener osobisty to osoba zajmująca się układaniem indywidualnego zestawu ćwiczeń oraz uczeniem ich prawidłowego wykonywania. Jego rolą jest również motywacja klienta i monitorowanie jego wyników. Współpracując z trenerem osobistym można znacząco skrócić czas niezbędny do uzyskania określonego celu sylwetkowego, sportowego, lub zdrowotnego. Zapraszamy do zapisów w recepcji, lub telefonicznie.',
             cennik: [
                 {
-                    nazwa: 'Trening personalny', cena: '110', wlasciwosci: [
+                    nazwa: 'Trening osobisty', cena: '110', wlasciwosci: [
                         { icon: IconUsers, text: 'godzinny trening osobisty' },
                         { icon: IconArticle, text: 'podstawowy plan treningowy' },
                     ]
@@ -225,27 +225,27 @@ export const data: Site = {
             trenerzy: [
                 {
                     name: 'Krzysztof',
-                    description: 'Trener personalny, właściciel',
+                    description: 'Trener osobisty, właściciel',
                     imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
                 },
                 {
                     name: 'Łukasz',
-                    description: 'Trener personalny',
+                    description: 'Trener osobisty',
                     imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
                 },
                 {
                     name: 'Robert',
-                    description: 'Trener personalny, masażysta',
+                    description: 'Trener osobisty, masażysta',
                     imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
                 },
                 {
                     name: 'Rafał',
-                    description: 'Trener personalny',
+                    description: 'Trener osobisty',
                     imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
                 },
                 {
                     name: 'Adam',
-                    description: 'Trener personalny',
+                    description: 'Trener osobisty',
                     imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
                 },
             ]
