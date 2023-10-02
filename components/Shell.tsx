@@ -54,7 +54,7 @@ export const Shell = ({ elements }: { elements?: Element[] }) => {
       <AppShell.Header>
         <Group justify='space-between' p='lg' >
           <Burger opened={opened} onClick={toggle} hiddenFrom='md' size="sm" />
-          <Center><Box style={{ width: '4rem' }}><IconParysLogo /></Box></Center>
+          <Center><Box style={{ width: '4rem' }}><IconParysLogo mini /></Box></Center>
           <Group visibleFrom='md'>
             {elementsWithScrollIntoView?.map((element, index) =>
               element.name &&
