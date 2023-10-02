@@ -23,7 +23,7 @@ export const Kontakt = ({ data }: { data: KontaktDane[] }) => {
                 </SimpleGrid>
                 <Divider c={'red'} size={'md'} m={'xl'} />
                 <Group __size={'sm'} align="end" justify="end" mt="xl">
-                    <Text >Writen by Patryk</Text>
+                    <Text >Written by Patryk</Text>
                     <IconGithub /></Group>
                 <Space h={'xl'} />
 

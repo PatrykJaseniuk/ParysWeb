@@ -6,7 +6,7 @@ import { IconShield } from "@/Icons/IconShield";
 import { IconMashine } from "@/Icons/IconMashine";
 import { IconArea } from "@/Icons/IconArea";
 import { IconCalaDoba } from "@/Icons/IconCalaDoba";
-import { Icon123, Icon24Hours, IconAccessible, IconAirConditioning, IconArticle, IconBarbell, IconCalendar, IconCircuitGround, IconClock, IconClockShield, IconDoorEnter, IconHeartHandshake, IconInfinity, IconLocation, IconMail, IconPhone, IconRuler2, IconSignLeft, IconSpace, IconSquare, IconSquare0Filled, IconSun, IconUsers, IconUsersGroup } from "@tabler/icons-react";
+import { Icon123, Icon24Hours, IconAccessible, IconAirConditioning, IconArticle, IconBarbell, IconCalendar, IconCircuitGround, IconClock, IconClockShield, IconDoorEnter, IconHeartHandshake, IconInfinity, IconLocation, IconMail, IconParking, IconPhone, IconRuler2, IconSignLeft, IconSpace, IconSquare, IconSquare0Filled, IconSun, IconUsers, IconUsersGroup } from "@tabler/icons-react";
 
 export const data: Site = {
     header: {
@@ -37,6 +37,12 @@ export const data: Site = {
                 description: 'Akceptujemy MultiSport, Medicover, FitProfit i PZU',
                 imgSrc: 'partnerzy.png',
                 icon: IconHeartHandshake
+            },
+            {
+                title: 'Parking',
+                description: 'Darmowy parking dla samochodów osobowych i rowerów',
+                icon: IconParking
+
             }
         ]
     },
@@ -104,22 +110,10 @@ export const data: Site = {
 
                     ]
                 },
+
                 {
-                    title: 'Badminton',
-                    description: 'Pełnowymiarowy kort do gry w badmintona ',
-                    videoSrc: 'crossfit.mp4',
-                    cennik: [
-                        {
-                            nazwa: 'BADMINTON godzina', cena: '60 zł', wlasciwosci: [{
-                                icon: IconClock,
-                                text: '1 godzina gry'
-                            }]
-                        },
-                    ]
-                },
-                {
-                    title: 'Sala CROSS',
-                    description: 'Duża, bogato wyposażona sala, która umożliwia wykonanie specjalistycznych treningów: sztuki walki, kalistenika, gimnastyka, trening funkcjonalny. Sala może być rezerwowana, dlatego przed planowany treningiem należy sprawdzić jej dostępność w kalendarzu.',
+                    title: 'Siłownia + Sala CROSS',
+                    description: 'Duża, bogato wyposażona sala, która umożliwia wykonanie specjalistycznych treningów: sztuki walki, kalistenika, gimnastyka, trening funkcjonalny. Sala może być rezerwowana, dlatego przed planowany treningiem należy sprawdzić jej dostępność w kalendarzu. ',
                     videoSrc: 'crossfit.mp4',
                     cennik: [
                         {
@@ -169,6 +163,19 @@ export const data: Site = {
                             ]
                         },
 
+                    ]
+                },
+                {
+                    title: 'Badminton',
+                    description: 'Pełnowymiarowy kort do gry w badmintona ',
+                    videoSrc: 'crossfit.mp4',
+                    cennik: [
+                        {
+                            nazwa: 'BADMINTON godzina', cena: '60 zł', wlasciwosci: [{
+                                icon: IconClock,
+                                text: '1 godzina gry'
+                            }]
+                        },
                     ]
                 },
                 {
