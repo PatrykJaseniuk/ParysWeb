@@ -11,39 +11,44 @@ import { Background } from "../Background"
 
 
 
-export const Tytul = ({ data }: { data: HeaderDane }) => (
+export const Tytul = ({ data }: { data: HeaderDane }) => {
 
-    <>
-        <Background
-            imgSrc="SilowniaBackground.png"
-        >
-            {/* <Overlay backgroundOpacity={0} color={'blue'} /> */}
-            <Container opacity={1} size={'xl'}>
+    const colorSheme = useMantineColorScheme()
+    const theme = useMantineTheme()
+    const color = colorSheme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[9]
 
-                <SimpleGrid
-                    cols={{ sm: 1, md: 2 }}
-                    // mih={'100vh'}
-                    spacing={'xl'}
-                >
-                    <Box m={'md'}>
-                        <IconParysLogo />
-                        <Space h={'xl'} />
-                        <IconMotto />
-                    </Box>
-                    <Stack justify="center" align="center" m={'xl'}>
-                        <Icon247 style={{ width: '50%', height: 'auto' }} />
-                        <Title order={3}>
-                            <Text ta={'center'} inherit variant="gradient" gradient={{ from: 'red', to: 'purple', deg: 0 }} >
-                                Czynne całą dobę
-                            </Text>
-                        </Title>
-                    </Stack>
-                </SimpleGrid>
-            </Container>
-        </Background>
-        <FeaturesGrid data={data.feature} />
-    </>
-)
+    return (
+        <>
+            <Background
+                imgSrc="SilowniaBackground.png"
+            >
+                {/* <Overlay backgroundOpacity={0} color={'blue'} /> */}
+                <Container opacity={1} size={'xl'}>
+
+                    <SimpleGrid
+                        cols={{ sm: 1, md: 2 }}
+                        // mih={'100vh'}
+                        spacing={'xl'}
+                    >
+                        <Box m={'md'}>
+                            <IconParysLogo />
+                            <Space h={'xl'} />
+                            <IconMotto />
+                        </Box>
+                        <Stack justify="center" align="center" m={'xl'}>
+                            <Icon247 style={{ width: '50%', height: 'auto' }} />
+                            <Title order={3}>
+                                <Text ta={'center'} inherit variant="gradient" gradient={{ from: 'red', to: color, deg: 0 }} >
+                                    Czynne całą dobę
+                                </Text>
+                            </Title>
+                        </Stack>
+                    </SimpleGrid>
+                </Container>
+            </Background>
+            <FeaturesGrid data={data.feature} />
+        </>)
+}
 
 export function Feature({ icon: Icon, title, description }: FitureDane) {
     return (

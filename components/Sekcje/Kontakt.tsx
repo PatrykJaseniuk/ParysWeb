@@ -10,8 +10,9 @@ export const Kontakt = ({ data }: { data: KontaktDane[] }) => {
         </ActionIcon>
     ));
 
+    const theme = useMantineTheme()
     return (
-        <Box bg={'blue'} >
+        <Box bg={"blue"} >
             <Container p={'xl'} size={'xl'} >
                 <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
                     <div>

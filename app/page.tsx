@@ -14,8 +14,8 @@ export default function HomePage() {
         elements={[
           { content: <Tytul data={data.header} /> },
           { content: <SekcjaUslugi data={data.Uslugi} />, name: 'Uslugi' },
-          { content: <SekcjaZajeciaIndywidualne data={data.zajeciaIndywidualne} />, name: 'Zajecia Indywidualne' },
-          { content: <SekcjaZajeciaGrupowe data={data.zajeciaGrupowe} />, name: 'Zajecia Grupowe' },
+          { content: <SekcjaZajeciaIndywidualne data={data.zajeciaIndywidualne} />, name: 'Trener osobisty' },
+          { content: <SekcjaZajeciaGrupowe data={data.zajeciaGrupowe} />, name: 'Zajecia grupowe' },
           { content: <Kontakt data={data.kontakt} />, name: 'Kontakt' },
         ]}
       />
