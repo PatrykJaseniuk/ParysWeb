@@ -117,19 +117,19 @@ export const data: Site = {
                     videoSrc: 'SilowniaFilmy/Cross.mp4',
                     cennik: [
                         {
-                            nazwa: 'CROSS jednorazowy', cena: '35 zł', wlasciwosci: [
+                            nazwa: 'OPEN jednorazowy', cena: '35 zł', wlasciwosci: [
                                 { icon: IconDoorEnter, text: 'jednorazowa wizyta' },
                             ],
                         },
                         {
-                            nazwa: 'CROSS miesięczny', cena: '180 zł', wlasciwosci: [
+                            nazwa: 'OPEN miesięczny', cena: '180 zł', wlasciwosci: [
                                 { icon: IconCalendar, text: 'ważny 1 miesiąc' },
                                 { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                                 { icon: Icon24Hours, text: 'całodobowy dostęp' },
                             ],
                         },
                         {
-                            nazwa: 'CROSS 10 wejść', cena: '160 zł', wlasciwosci: [
+                            nazwa: 'OPEN 10 wejść', cena: '160 zł', wlasciwosci: [
                                 { icon: IconCalendar, text: 'ważny 2 miesiąc' },
                                 { icon: IconDoorEnter, text: '10 wejść' },
                                 { icon: Icon24Hours, text: 'całodobowy dostęp' },
