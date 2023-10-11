@@ -9,7 +9,7 @@ import '@mantine/carousel/styles.css';
 import { useRef, useState } from "react"
 import { IconVerifed } from "@/Icons/IconVerified"
 import { IconTime } from "@/Icons/IconTime"
-import { IconBarbell, IconCalendar, IconHeartPlus, IconHeartbeat, IconInfinity, IconMassage, IconRings, IconStretching, IconStretching2, IconTreadmill, IconWaveSquare, IconWeight } from "@tabler/icons-react"
+import { IconBarbell, IconCalendar, IconHeartPlus, IconHeartbeat, IconInfinity, IconMassage, IconRings, IconStretching, IconStretching2, IconTreadmill, IconUsers, IconUsersGroup, IconWaveSquare, IconWeight } from "@tabler/icons-react"
 import { Cennik } from "../Cennik"
 import { IconGymStation } from "@/IconsParys/IconGymStation"
 
@@ -112,10 +112,10 @@ const UslugaOpen = ({ data }: { data: UslugaDane }) => {
 
                     <List spacing={'md'}>
                         <List.Item
-                            icon={<ThemeIcon variant="default" size={100} radius={50}>
+                            icon={<ThemeIcon variant="default" size={80} radius={50}>
                                 <Flex style={{ width: '80%' }} wrap={'wrap'}>
-                                    <IconWeight style={{ height: 'auto', width: '45%' }} />
                                     <IconBarbell style={{ height: 'auto', width: '45%' }} />
+                                    <IconGymStation style={{ height: 'auto', width: '45%' }} />
                                     <IconTreadmill style={{ height: 'auto', width: '45%' }} />
                                     <IconStretching style={{ height: 'auto', width: '45%' }} />
                                 </Flex>
@@ -124,13 +124,21 @@ const UslugaOpen = ({ data }: { data: UslugaDane }) => {
                             <Text size="lg">SIŁOWNIA</Text>
                         </List.Item>
                         <List.Item icon={
-                            <ThemeIcon variant="default" size={100} radius={50}><IconRings width={'80%'} height={'auto'} /></ThemeIcon>
+                            <ThemeIcon variant="default" size={80} radius={50}><IconRings width={'80%'} height={'auto'} /></ThemeIcon>
                         }>
                             <Text size="lg">SALA CROSS</Text>
                         </List.Item>
                         <List.Item
                             icon={<ThemeIcon
-                                variant="default" size={100} radius={50}>
+                                variant="default" size={80} radius={50}>
+                                <IconUsersGroup style={{ width: '45%', height: 'auto' }} />
+                            </ThemeIcon>}
+                        >
+                            <Text size="1.5rem">ZAJĘCIA GRUPOWE CROSS</Text>
+                        </List.Item>
+                        <List.Item
+                            icon={<ThemeIcon
+                                variant="default" size={80} radius={50}>
                                 <IconMassage style={{ width: '45%', height: 'auto' }} />
                                 <IconWaveSquare style={{ width: '45%', height: 'auto' }} />
                             </ThemeIcon>}
@@ -154,7 +162,7 @@ const Video = ({ src }: { src: string }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const { ref, entry } = useIntersection({
         root: containerRef.current,
-        threshold: 1,
+        threshold: 0.1,
     });
 
     return (

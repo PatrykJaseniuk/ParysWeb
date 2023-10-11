@@ -49,8 +49,6 @@ export const Cennik = ({ data }: { data: CenaDane[] }) => {
                                     </Text>
                                 </Title>
 
-
-
                                 <Divider my={"xs"} />
                                 <Title order={3}>
                                     <Text ta={'center'} inherit size="xl" variant="gradient" gradient={{ from: 'red', to: color }} >
