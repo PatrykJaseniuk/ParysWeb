@@ -10,10 +10,10 @@ export const theme = createTheme({
 
     // properties for individual headings, all of them are optional
     sizes: {
-      h1: { fontSize: rem(100), fontWeight: '1000', lineHeight: '1.5' },
-      h2: { fontSize: rem(70), lineHeight: '1.5' },
-      h3: { fontSize: rem(50) },
-      h4: { fontSize: rem(30) },
+      h1: { fontSize: rem(70), fontWeight: '1000', lineHeight: '1.5' },
+      h2: { fontSize: rem(50), lineHeight: '1.5' },
+      h3: { fontSize: rem(30) },
+      h4: { fontSize: rem(20) },
       // // ...up to h6
       // h6: { fontWeight: '900' },
     },

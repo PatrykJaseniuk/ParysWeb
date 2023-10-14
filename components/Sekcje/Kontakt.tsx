@@ -16,7 +16,7 @@ export const Kontakt = ({ data }: { data: KontaktDane[] }) => {
             <Container size={'xl'} p={0} >
                 <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
                     <Container>
-                        <Title order={3}>Kontakt</Title>
+                        <Title order={1}>Kontakt</Title>
                         <ContactIconsList data={data} />
                         <Group mt="xl">{icons}</Group>
                     </Container>

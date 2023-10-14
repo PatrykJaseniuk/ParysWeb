@@ -37,11 +37,9 @@ export const Tytul = ({ data }: { data: HeaderDane }) => {
                         </Box>
                         <Stack justify="center" align="center" m={'xl'}>
                             <Icon247 style={{ width: '50%', height: 'auto' }} />
-                            <Title order={3}>
-                                <Text ta={'center'} inherit variant="gradient" gradient={{ from: 'red', to: color, deg: 0 }} >
-                                    Czynne całą dobę
-                                </Text>
-                            </Title>
+                            <Text size="xl" ta={'center'} variant="gradient" gradient={{ from: 'red', to: color, deg: 0 }} >
+                                Czynne całą dobę
+                            </Text>
                         </Stack>
                     </SimpleGrid>
                 </Container>

@@ -20,11 +20,10 @@ const Zajecie = ({ data }: { data: ZajecieDane }) => {
         <Container size={"xl"}>
             <SimpleGrid mt={'xl'} cols={{ sm: 1, md: 2 }}>
                 <Stack my={'xl'}>
-                    <Title order={3}>
+                    <Title order={2}>
                         <Text inherit >
                             {data.title}
                         </Text>
-
                     </Title>
                     <Text>
                         {data.description}

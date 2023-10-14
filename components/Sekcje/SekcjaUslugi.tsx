@@ -30,11 +30,10 @@ const Usluga = ({ data }: { data: UslugaDane }) => {
         <Container size={"xl"}>
             <SimpleGrid mt={'xl'} cols={{ sm: 1, md: 2 }}>
                 <Stack>
-                    <Title order={3}>
+                    <Title order={2}>
                         <Text inherit >
                             {data.title}
                         </Text>
-
                     </Title>
                     <Text>
                         {data.description}
@@ -62,7 +61,7 @@ const UslugaSilownia = ({ data }: { data: UslugaDane }) => {
         <Container size={"xl"}>
             <SimpleGrid mt={'xl'} cols={{ sm: 1, md: 2 }}>
                 <Stack>
-                    <Title order={3}>
+                    <Title order={2}>
                         <Text inherit >
                             {data.title}
                         </Text>
@@ -101,7 +100,7 @@ const UslugaOpen = ({ data }: { data: UslugaDane }) => {
         <Container size={"xl"}>
             <SimpleGrid mt={'xl'} cols={{ sm: 1, md: 2 }}>
                 <Stack>
-                    <Title order={3}>
+                    <Title order={2}>
                         <Text inherit >
                             {data.title}
                         </Text>

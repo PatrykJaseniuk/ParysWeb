@@ -15,7 +15,7 @@ export const Sekcja = ({ children, data }: { data: SectionDane, children: React.
                 imgSrc={data.background}
             >
                 <Center>
-                    <Title order={2}>
+                    <Title order={1}>
                         <Text ta={'center'} inherit variant="gradient" gradient={{ from: 'red', to: color }}>
                             {data.title}
                         </Text>
