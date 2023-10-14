@@ -6,7 +6,7 @@ import { Sekcja } from "./Sekcja"
 import { useDisclosure, useIntersection } from "@mantine/hooks"
 import { Carousel, CarouselSlide, Embla, useAnimationOffsetEffect } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { IconVerifed } from "@/Icons/IconVerified"
 import { IconTime } from "@/Icons/IconTime"
 import { IconBarbell, IconCalendar, IconHeartPlus, IconHeartbeat, IconInfinity, IconMassage, IconRings, IconStretching, IconStretching2, IconTreadmill, IconUsers, IconUsersGroup, IconWaveSquare, IconWeight } from "@tabler/icons-react"
@@ -159,33 +159,28 @@ const UslugaOpen = ({ data }: { data: UslugaDane }) => {
 
 const Video = ({ src }: { src: string }) => {
 
+    const videoRef = useRef<HTMLVideoElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const { ref, entry } = useIntersection({
-        root: containerRef.current,
-        threshold: 0.1,
+        threshold: 0.5,
     });
 
+    useEffect(() => {
+        entry?.isIntersecting ? videoRef.current?.play() : videoRef.current?.pause();
+    }, [entry?.isIntersecting]);
+
+
     return (
-        <Box style={{ visibility: entry?.isIntersecting ? 'visible' : 'hidden' }}
+        <Box
             ref={ref}>
-            {/* <Transition
-                keepMounted
-                mounted={entry?.isIntersecting ? true : false}
-                transition="scale-x"
-                duration={800}
-                timingFunction="ease"
-            > */}
             <video
+                ref={videoRef}
                 autoPlay
                 loop
                 muted
                 style={{ width: '100%', objectFit: 'cover', borderRadius: '10%' }}
                 src={src}
             />
-
-
-
-            {/* </Transition> */}
         </Box>
 
 
