@@ -2,7 +2,7 @@ import { SilowniaI, StrefaI, UslugaI, UslugiI, GrupaStref } from "@/src/interfac
 import { cardio } from "@/src/stories/1/Uslugi/Strefa.stories";
 import { keys } from "@mantine/core";
 import { zajeciaGrupowe } from "./ZajeciaGrupowe";
-import { IconTableHeart } from "@tabler/icons-react";
+import { Icon24Hours, IconCalendar, IconDoorEnter, IconInfinity, IconTableHeart } from "@tabler/icons-react";
 
 // definicje pogrupowane w warstwy
 
@@ -114,7 +114,37 @@ const silownia: SilowniaI = {
                     cena: '25 zł',
                     nazwa: 'Jednorazowy',
                     wlasciwosci: [
-                        { icon: IconTableHeart, text: 'ważny 24h' }
+                        { icon: IconDoorEnter, text: 'jedno wejście' },
+
+                    ],
+                },
+                {
+                    nazwa: 'SIŁOWNIA miesięczny', cena: '140 zł', wlasciwosci: [
+                        { icon: IconCalendar, text: 'ważny 1 miesiąc' },
+                        { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+                        { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                    ]
+                },
+                {
+                    nazwa: ' SIŁOWNIA 2 tygodnie', cena: '100 zł', wlasciwosci: [
+                        { icon: IconCalendar, text: 'ważny 2 tygodnie' },
+                        { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+                        { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                    ]
+                },
+                {
+                    nazwa: 'SIŁOWNIA 10 wejść', cena: '120 zł', wlasciwosci: [
+                        { icon: IconCalendar, text: 'ważny 2 miesiące' },
+                        { icon: IconDoorEnter, text: '10 wejść' },
+                        { icon: Icon24Hours, text: 'całodobowy dostęp' },
+
+                    ]
+                },
+                {
+                    nazwa: 'SIŁOWNIA 8 wejść', cena: '100 zł', wlasciwosci: [
+                        { icon: IconCalendar, text: 'ważny 2 miesiące' },
+                        { icon: IconDoorEnter, text: '8 wejść' },
+                        { icon: Icon24Hours, text: 'całodobowy dostęp' },
                     ]
                 },
             ],
