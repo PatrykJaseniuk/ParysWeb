@@ -2,6 +2,7 @@ import { SilowniaI, StrefaI, UslugaI, UslugiI, GrupaStref } from "@/src/interfac
 import { cardio } from "@/src/stories/1/Uslugi/Strefa.stories";
 import { keys } from "@mantine/core";
 import { zajeciaGrupowe } from "./ZajeciaGrupowe";
+import { IconTableHeart } from "@tabler/icons-react";
 
 // definicje pogrupowane w warstwy
 
@@ -107,24 +108,28 @@ const silownia: SilowniaI = {
     opis: 'Super fajna silownia',
     karnety: [
         {
-            nazwa: '6 stref',
+            nazwa: '6 stref + zajęcia grupowe',
             cennik: [
                 {
-                    cena: '100 zł',
-                    nazwa: 'Miesięczny',
-                    wlasciwosci: []
+                    cena: '25 zł',
+                    nazwa: 'Jednorazowy',
+                    wlasciwosci: [
+                        { icon: IconTableHeart, text: 'ważny 24h' }
+                    ]
                 },
-
             ],
             dostepneStrefy: [
                 strefy.cardio,
+                strefy.maszynyZeStosem,
+                strefy.rozgrzewka,
+                strefy.wolneCiezary,
                 strefy.cross,
-                strefy.maszynyZeStosem
+                strefy.rollmasazIPlatformaWibrujaca,
             ],
-            czyDostepneZajeciaGrupowe: false,
+            czyDostepneZajeciaGrupowe: true,
         },
         {
-            nazwa: '2 stref',
+            nazwa: '5 stref',
             cennik: [
                 {
                     cena: '100 zł',
@@ -135,9 +140,53 @@ const silownia: SilowniaI = {
             ],
             dostepneStrefy: [
                 strefy.cardio,
-                strefy.cross
+                strefy.maszynyZeStosem,
+                strefy.rozgrzewka,
+                strefy.wolneCiezary,
+                strefy.cross,
+                // strefy.rollmasazIPlatformaWibrujaca,
+            ],
+            czyDostepneZajeciaGrupowe: false
+        },
+        {
+            nazwa: '4 strefy + zajęcia grupowe',
+            cennik: [
+                {
+                    cena: '100 zł',
+                    nazwa: 'Miesięczny',
+                    wlasciwosci: []
+                },
+
+            ],
+            dostepneStrefy: [
+                strefy.cardio,
+                strefy.maszynyZeStosem,
+                strefy.rozgrzewka,
+                strefy.wolneCiezary,
+                // strefy.cross,
+                // strefy.rollmasazIPlatformaWibrujaca,
             ],
             czyDostepneZajeciaGrupowe: true
+        },
+        {
+            nazwa: '4 strefy',
+            cennik: [
+                {
+                    cena: '100 zł',
+                    nazwa: 'Miesięczny',
+                    wlasciwosci: []
+                },
+
+            ],
+            dostepneStrefy: [
+                strefy.cardio,
+                strefy.maszynyZeStosem,
+                strefy.rozgrzewka,
+                strefy.wolneCiezary,
+                // strefy.cross,
+                // strefy.rollmasazIPlatformaWibrujaca,
+            ],
+            czyDostepneZajeciaGrupowe: false
         }
     ],
     wszystkieStrefy: Object.keys(strefy).map((key) => strefy[key as keyof Strefy]),

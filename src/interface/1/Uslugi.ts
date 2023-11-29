@@ -1,4 +1,4 @@
-import { MantineColorsTuple } from "@mantine/core";
+import { DefaultMantineColor, MantineColorsTuple } from "@mantine/core";
 import { CenaI as CenaI } from "../2/Cena";
 import { ZajecieI as ZajecieGrupoweI } from "./ZajeciaGrupowe";
 
@@ -19,7 +19,7 @@ export type KarnetI = {
     nazwa: string
     dostepneStrefy: StrefaI[],
     czyDostepneZajeciaGrupowe: boolean
-    cennik: CenaI[]
+    cennik: CenaI[],
 }
 
 
