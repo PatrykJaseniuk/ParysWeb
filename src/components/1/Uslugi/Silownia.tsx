@@ -1,11 +1,12 @@
 import { KarnetI, SilowniaI, StrefaI, UslugaI } from "@/src/interface/1/Uslugi"
-import { Text, Container, SimpleGrid, Stack, Title, Divider, SegmentedControl, DefaultMantineColor } from "@mantine/core"
+import { Text, Container, SimpleGrid, Stack, Title, Divider, SegmentedControl, DefaultMantineColor, Chip, Group, Button, useMantineTheme } from "@mantine/core"
 import { Cennik } from "../../2/Cennik"
 import { Video } from "./SekcjaUslugi"
 import { useState } from "react"
 import { CenaI } from "@/src/interface/2/Cena"
 import { Strefa } from "./Strefa"
 import { ZajecieGrupowe } from "./ZajecieGrupowe"
+import { useMediaQuery } from "@mantine/hooks"
 
 
 
@@ -25,12 +26,16 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
         color: 'grey'
     };
 
+    const theme = useMantineTheme();
+    const isLargeScreen = useMediaQuery(`(min-width: 1000px)`);
+
+
     type KarnetKolorI = { karnet: KarnetI, kolor: DefaultMantineColor }
     const kolory: DefaultMantineColor[] = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
     const karnetyKolory = data.karnety.map((karnet, index) => ({ karnet: karnet, kolor: kolory[index % kolory.length] }))
 
     const [aktywnyKarnetNazwa, setAktywnyKarnetNazwa] = useState(data.karnety[0].nazwa);
-    const aktywnyKarnetKolor = karnetyKolory.find((karnetKolor) => karnetKolor.karnet.nazwa == aktywnyKarnetNazwa) as KarnetKolorI;
+    const aktywnyKarnetKolor = (karnetyKolory.find((karnetKolor) => karnetKolor.karnet.nazwa == aktywnyKarnetNazwa) || karnetyKolory[0]) as KarnetKolorI;
     return (
         <Container size={"xl"}>
 
@@ -44,14 +49,27 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
                     {data.opis}
                 </Text>
 
-                <SegmentedControl
-                    color={aktywnyKarnetKolor.kolor}
-                    // value={aktywnyKarnet}
-                    onChange={(value) => setAktywnyKarnetNazwa(value)}
-                    data={data.karnety.map((karnet) => karnet.nazwa)}
-                />
+                {isLargeScreen ?
+                    <SegmentedControl
+                        color={aktywnyKarnetKolor.kolor}
+                        value={aktywnyKarnetNazwa}
+                        onChange={(value) => setAktywnyKarnetNazwa(value)}
+                        data={data.karnety.map((karnet) => karnet.nazwa)}
+                    />
+                    :
+                    <Group>
+                        {data.karnety.map((karnet) =>
+                            <Button
+                                variant={karnet.nazwa == aktywnyKarnetNazwa ? 'filled' : 'light'}
+                                color={karnet.nazwa == aktywnyKarnetNazwa ? aktywnyKarnetKolor.kolor : 'gray'}
+                                onClick={() => setAktywnyKarnetNazwa(karnet.nazwa)} >{karnet.nazwa}
+                            </Button>
+                        )}
+                    </Group>
 
-                <Text> dostepne strefy </Text>
+                }
+
+                <Text>strefy </Text>
                 <SimpleGrid cols={3}>
                     {data.wszystkieStrefy.map((strefa) => {
                         const isActive = aktywnyKarnetKolor.karnet.dostepneStrefy.find((strefaAktywnegoKarnetu) =>
@@ -64,7 +82,7 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
                     })}
                 </SimpleGrid>
 
-                <Text> dostępne zajęcia grupowe</Text>
+                <Text>zajęcia grupowe</Text>
                 <SimpleGrid cols={3}>
                     {data.wszystkieZajeciaGrupowe.map((zajecie) =>
                         <ZajecieGrupowe

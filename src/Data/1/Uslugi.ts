@@ -63,44 +63,7 @@ export const strefy: Strefy = {
 
 
 // ----------Level 2---------------------------
-const czteryStrefy: GrupaStref = {
-    nazwa: "Cztery Strefy",
-    opis: "Karnet basic",
-    Strefy: [
-        strefy.cardio,
-        strefy.maszynyZeStosem,
-        strefy.wolneCiezary,
-        strefy.rozgrzewka
-    ],
-    cena: 0
-}
 
-const piecStref: GrupaStref = {
-    nazwa: "Pięć Stref",
-    opis: "Karnet premium",
-    Strefy: [
-        strefy.cardio,
-        strefy.maszynyZeStosem,
-        strefy.rozgrzewka,
-        strefy.wolneCiezary,
-        strefy.cross,
-    ],
-    cena: 0
-}
-
-const szescStref: GrupaStref = {
-    nazwa: "Sześć Stref",
-    opis: "Full wypas",
-    Strefy: [
-        strefy.cardio,
-        strefy.maszynyZeStosem,
-        strefy.rozgrzewka,
-        strefy.wolneCiezary,
-        strefy.cross,
-        strefy.rollmasazIPlatformaWibrujaca,
-    ],
-    cena: 0
-}
 
 // ----------Level 1---------------------------
 const silownia: SilowniaI = {
@@ -145,6 +108,21 @@ const silownia: SilowniaI = {
                         { icon: IconCalendar, text: 'ważny 2 miesiące' },
                         { icon: IconDoorEnter, text: '8 wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                    ]
+                },
+                {
+                    imgSrc: 'multisport.png', nazwa: '', cena: '', wlasciwosci: [
+                        { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                    ]
+                },
+                {
+                    imgSrc: 'medicover.png', nazwa: '', cena: '', wlasciwosci: [
+                        { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                    ]
+                },
+                {
+                    imgSrc: 'fitProfit.png', nazwa: '', cena: '', wlasciwosci: [
+                        { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
                     ]
                 },
             ],
@@ -223,23 +201,37 @@ const silownia: SilowniaI = {
     wszystkieZajeciaGrupowe: zajeciaGrupowe.zajecia
 }
 
+const uslugiStandardowe: UslugaI[] = [
+    {
+        title: "Badminton",
+        description: "Pełnowymiarowy kort do gry w badmintona",
+        videoSrc: "filmy/Badminton.mp4",
+        cennik: [
+            {
+                nazwa: "Godzina gry",
+                cena: '60 zł',
+                wlasciwosci: [],
+            }
+        ]
+    },
+    {
+        title: "Badminton",
+        description: "Pełnowymiarowy kort do gry w badmintona",
+        videoSrc: "filmy/Badminton.mp4",
+        cennik: [
+            {
+                nazwa: "Godzina gry",
+                cena: '60 zł',
+                wlasciwosci: [],
+            }
+        ]
+    }
+]
+
 // ----------Level 0---------------------------
 export const uslugi: UslugiI = {
     silownia: silownia,
-    uslugiStandardowe: [
-        {
-            title: "Badminton",
-            description: "Pełnowymiarowy kort do gry w badmintona",
-            videoSrc: "filmy/Badminton.mp4",
-            cennik: [
-                {
-                    nazwa: "Godzina gry",
-                    cena: '60 zł',
-                    wlasciwosci: [],
-                }
-            ]
-        }
-    ]
+    uslugiStandardowe: uslugiStandardowe
 }
 
 

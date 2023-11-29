@@ -19,13 +19,16 @@ export const Cennik = ({ data, kolor }: { data: CenaI[], kolor?: DefaultMantineC
     useAnimationOffsetEffect(embla, TRANSITION_DURATION);
     return (
         <>
-            <Modal opened={opened} onClose={close} title="cennik" centered >
+            <Modal size={'100%'} opened={opened} onClose={close} title="cennik" centered >
                 <Carousel
+                    // style={{ width: '100%' }}
                     getEmblaApi={setEmbla}
                     slideGap="md"
+                    slideSize={{ base: '100%', xs: '100%', sm: '50%', md: '33.333333%', lg: '25%', xl: '20%' }}
+                    align={'start'}
                 >
                     {data.map((cena, index) =>
-                        <Carousel.Slide key={index}>
+                        <Carousel.Slide key={index} >
                             <Card shadow="sm" mx={'xl'} padding="xl" radius="md" withBorder>
                                 {
                                     cena.imgSrc &&

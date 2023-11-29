@@ -10,17 +10,17 @@ export const Sekcja = ({ children, data }: { data: SectionBaseI, children: React
 
     return (
         <>
-            <Background
+            {/* <Background
                 imgSrc={data.background}
-            >
-                <Center>
-                    <Title order={1}>
-                        <Text ta={'center'} inherit variant="gradient" gradient={{ from: 'red', to: color }}>
-                            {data.title}
-                        </Text>
-                    </Title>
-                </Center>
-            </Background>
+            > */}
+            <Center>
+                <Title order={1}>
+                    <Text ta={'center'} inherit variant="gradient" gradient={{ from: 'red', to: color }}>
+                        {data.title}
+                    </Text>
+                </Title>
+            </Center>
+            {/* </Background> */}
             {children}
         </>
     )
