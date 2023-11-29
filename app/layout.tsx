@@ -2,7 +2,7 @@
 import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from '../theme';
+import { theme } from '../src/theme';
 import { url } from 'inspector';
 
 export const metadata = {
@@ -17,12 +17,12 @@ export default function RootLayout({ children }: { children: any }) {
         <ColorSchemeScript />
         <meta charSet="utf-8" />
         <title>{metadata.title}</title>
-        <script type="application/ld+json">
+        {/* <script type="application/ld+json">
           "@context": "https://schema.org",
           "@type": "Organization",
           "url": "https://parys.nysa.pl/",
           "logo": "https://parys.nysa.pl/Parys_logo_wektor.svg"
-        </script>
+        </script> */}
 
 
         <link rel="shortcut icon" href="IconParysLogoMini.svg" />
