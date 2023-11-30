@@ -13,7 +13,7 @@ export const Strefa = ({ data, isActive, kolor }: { data: StrefaI, isActive: boo
         height: '100%',
         margin: 'auto',
         transition: 'opacity 0.5s ease, filter 0.5s ease, border-color 0.5s ease', // efekt przejścia dla opacity, filter i border-color
-        border: '1px solid transparent', // transparent border for smooth transition
+        border: '3px solid transparent', // transparent border for smooth transition
     };
 
     // Styl dla aktywnego komponentu
@@ -41,20 +41,16 @@ export const Strefa = ({ data, isActive, kolor }: { data: StrefaI, isActive: boo
         <>
             <Card
                 shadow={cardStyle.shadow}
-                p="lg"
+                // p="lg"
                 style={{ ...cardBaseStyle, opacity: cardStyle.opacity, filter: cardStyle.filter, borderColor: cardStyle.borderColor }}
                 onClick={() => setModalOpened(true)}
             >
                 <Card.Section>
-
                     <Image src={data.media.thumbnail} width="100%" />
                 </Card.Section>
                 <Text size="md" style={{ marginTop: theme.spacing.sm }}>
                     {data.nazwa}
                 </Text>
-                {/* <Text size="sm" style={{ color: isActive ? theme.colors.gray[6] : 'lightgray' }}>
-                    {data.opis}
-                </Text> */}
             </Card>
             <StrefaModal data={data} opened={modalOpened} onClose={() => setModalOpened(false)} />
         </>

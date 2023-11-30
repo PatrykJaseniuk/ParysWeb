@@ -15,7 +15,7 @@ export const ZajecieGrupowe = ({ data, isActive, kolor }: { data: ZajecieI, isAc
         height: '100%',
         margin: 'auto',
         transition: 'opacity 0.5s ease, filter 0.5s ease, border-color 0.5s ease', // efekt przejścia dla opacity, filter i border-color
-        border: '1px solid transparent', // transparent border for smooth transition
+        border: '3px solid transparent', // transparent border for smooth transition
     };
 
     // Styl dla aktywnego komponentu

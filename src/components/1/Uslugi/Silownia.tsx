@@ -70,7 +70,7 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
                 }
 
                 <Text>strefy </Text>
-                <SimpleGrid cols={3}>
+                <SimpleGrid cols={{ base: 2, md: 3 }}>
                     {data.wszystkieStrefy.map((strefa) => {
                         const isActive = aktywnyKarnetKolor.karnet.dostepneStrefy.find((strefaAktywnegoKarnetu) =>
                             strefaAktywnegoKarnetu === strefa
@@ -83,7 +83,7 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
                 </SimpleGrid>
 
                 <Text>zajęcia grupowe</Text>
-                <SimpleGrid cols={3}>
+                <SimpleGrid cols={{ base: 2, md: 3 }}>
                     {data.wszystkieZajeciaGrupowe.map((zajecie) =>
                         <ZajecieGrupowe
                             data={zajecie}
@@ -93,7 +93,7 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
                     )}
                 </SimpleGrid>
 
-                <Cennik data={aktywnyKarnetKolor.karnet.cennik} kolor={aktywnyKarnetKolor.kolor} />
+                <Cennik nazwa={aktywnyKarnetKolor.karnet.nazwa} data={aktywnyKarnetKolor.karnet.cennik} kolor={aktywnyKarnetKolor.kolor} />
 
             </Stack>
             <Divider size={'xl'} m={"xl"} />

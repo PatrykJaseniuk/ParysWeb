@@ -9,7 +9,7 @@ import { UslugiI } from "@/src/interface/1/Uslugi";
 export const sekcjaUslugi: SectionI<UslugiI> = {
     section: {
         background: "",
-        title: "Usługi"
+        title: "Oferta"
     },
     content: uslugi
 }
@@ -17,7 +17,7 @@ export const sekcjaUslugi: SectionI<UslugiI> = {
 export const sekcjaZajeciaIndywidulane: SectionI<ZajeciaIndywidualneI> = {
     section: {
         background: "",
-        title: "Zajęcia Indywidualne"
+        title: "Zajęcia Personalne"
     },
     content: zajeciaIndywidualne
 }

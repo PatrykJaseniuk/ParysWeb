@@ -17,9 +17,11 @@ export const SekcjaZajeciaGrupowe = ({ data }: { data: SectionI<ZajeciaGrupoweI>
 const ZajeciaGrupowe = ({ data }: { data: ZajeciaGrupoweI }) => {
 
     return (
-        <div>
-
-        </div>
+        <>
+            {data.zajecia.map((zajecie) =>
+                <Zajecie data={zajecie} />
+            )}
+        </>
     )
 
 }

@@ -5,6 +5,7 @@ import { IconParysLogo } from "@/src/components/2/IconsParys/IconParysLogo"
 import { Container, SimpleGrid, useMantineColorScheme, useMantineTheme, Text, Box, Stack, Space, ThemeIcon } from "@mantine/core"
 import { Background } from "../2/Background"
 import { FitureI, HeaderI } from "@/src/interface/1/Header"
+import { useMediaQuery } from "@mantine/hooks"
 
 
 
@@ -14,10 +15,11 @@ export const Tytul = ({ data }: { data: HeaderI }) => {
     const theme = useMantineTheme()
     const color = colorSheme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[9]
 
+
     return (
         <>
             <Background
-                imgSrc="SilowniaBackground.png"
+                imgSrc="zasoby/SilowniaBackground.png"
             >
                 {/* <Overlay backgroundOpacity={0} color={'blue'} /> */}
                 <Container opacity={1} size={'xl'}>
@@ -46,12 +48,13 @@ export const Tytul = ({ data }: { data: HeaderI }) => {
 }
 
 export function Feature({ icon: Icon, title, description }: FitureI) {
+    const isLargeScreen = useMediaQuery(`(min-width: 1000px)`);
     return (
         <div>
-            <ThemeIcon variant="light" size={80} radius={40}>
+            <ThemeIcon variant="light" size={isLargeScreen ? 80 : 50} radius={40}>
                 <Icon style={{ width: '80%', height: 'auto' }} />
             </ThemeIcon>
-            <Text size="xl" mt="sm" mb={7}>
+            <Text size={isLargeScreen ? 'xl' : 'md'} mt="sm" mb={7}>
                 {title}
             </Text>
             <Text c="dimmed" lh={1.6}>
@@ -68,7 +71,7 @@ export function FeaturesGrid({ data }: { data: FitureI[] }) {
         <Container size={'xl'} >
             <SimpleGrid
                 mt={60}
-                cols={{ base: 1, sm: 2, md: 3 }}
+                cols={{ base: 2, sm: 2, md: 3 }}
                 spacing={{ base: 'xl', md: 50 }}
                 verticalSpacing={{ base: 'xl', md: 50 }}
             >

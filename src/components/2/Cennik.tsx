@@ -4,7 +4,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
 import { CenaI } from "../../interface/2/Cena";
 
-export const Cennik = ({ data, kolor }: { data: CenaI[], kolor?: DefaultMantineColor }) => {
+export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor?: DefaultMantineColor, nazwa?: string }) => {
 
 
     const colorSheme = useMantineColorScheme()
@@ -19,7 +19,7 @@ export const Cennik = ({ data, kolor }: { data: CenaI[], kolor?: DefaultMantineC
     useAnimationOffsetEffect(embla, TRANSITION_DURATION);
     return (
         <>
-            <Modal size={'100%'} opened={opened} onClose={close} title="cennik" centered >
+            <Modal size={'100%'} opened={opened} onClose={close} title={nazwa} centered >
                 <Carousel
                     // style={{ width: '100%' }}
                     getEmblaApi={setEmbla}

@@ -6,8 +6,8 @@ import { sekcjaUslugi, sekcjaZajeciaGrupowe, sekcjaZajeciaIndywidulane } from ".
 
 export const site: SiteI = {
     header: { content: header, nazwa: '' },
-    uslugi: { content: sekcjaUslugi, nazwa: 'Uslugi' },
+    uslugi: { content: sekcjaUslugi, nazwa: 'Oferta' },
     zajeciaGrupowe: { content: sekcjaZajeciaGrupowe, nazwa: 'Zajecia Grupowe' },
-    zajeciaIndywidualne: { content: sekcjaZajeciaIndywidulane, nazwa: 'Zajecia Indywidualne' },
+    zajeciaIndywidualne: { content: sekcjaZajeciaIndywidulane, nazwa: 'Zajecia Personalne' },
     kontakt: { content: kontakt, nazwa: 'Kontakt' },
 }

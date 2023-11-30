@@ -41,13 +41,13 @@ const Trenerzy = ({ data }: { data: TrenerI[] }) => {
 
     const theme = useMantineTheme();
     const features = data.map((trener) => (
-        <Card key={trener.name} shadow="md" radius="md" padding="xl">
+        <Card key={trener.name} shadow="md" radius="md" padding="md">
             <IconUser
-                style={{ width: rem(50), height: rem(50) }}
+                style={{ width: rem(50), height: rem(35) }}
                 stroke={2}
                 color={theme.colors.blue[6]}
             />
-            <Text fz="lg" fw={500} mt="md">
+            <Text fz="md" fw={500} mt="md">
                 {trener.name}
             </Text>
             <Text fz="sm" c="dimmed" mt="sm">
@@ -56,7 +56,7 @@ const Trenerzy = ({ data }: { data: TrenerI[] }) => {
         </Card>
     ));
     return (
-        <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>
+        <SimpleGrid cols={{ base: 2, md: 4 }} spacing="xl" mt={50}>
             {features}
         </SimpleGrid>
 
