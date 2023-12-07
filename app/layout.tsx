@@ -1,9 +1,11 @@
 
+
 import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { theme } from '../src/theme';
+
 import { url } from 'inspector';
+import { generateTheme } from '@/src/theme';
 
 export const metadata = {
   title: 'Sport Studio Parys',
@@ -11,6 +13,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: any }) {
+
+ 
+
   return (
     <html lang="en">
       <head>
@@ -35,7 +40,7 @@ export default function RootLayout({ children }: { children: any }) {
 
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        {children}
       </body>
     </html>
   );

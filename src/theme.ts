@@ -1,8 +1,7 @@
-'use client';
 
 import { createTheme, rem, } from '@mantine/core';
 
-export const theme = createTheme({
+export const generateTheme = (sizeScale: number) => createTheme({
   headings: {
     // properties for all headings
     // fontWeight: '400',
@@ -10,10 +9,10 @@ export const theme = createTheme({
 
     // properties for individual headings, all of them are optional
     sizes: {
-      h1: { fontSize: rem(70), fontWeight: '1000', lineHeight: '1.5' },
-      h2: { fontSize: rem(50), lineHeight: '1.5' },
-      h3: { fontSize: rem(30) },
-      h4: { fontSize: rem(20) },
+      h1: { fontSize: rem(70 * sizeScale), fontWeight: '1000', lineHeight: '1.5' },
+      h2: { fontSize: rem(50 * sizeScale), lineHeight: '1.5' },
+      h3: { fontSize: rem(30 * sizeScale) },
+      h4: { fontSize: rem(20 * sizeScale) },
       // // ...up to h6
       // h6: { fontWeight: '900' },
     },
@@ -34,7 +33,9 @@ export const theme = createTheme({
   },
   primaryColor: 'red',
   fontSizes: {
-    xl: '3rem',
-    lg: '1.5rem',
+    xl: rem(30 * sizeScale),
+    lg: rem(25 * sizeScale),
+    md: rem(20 * sizeScale)
   }
 });
+

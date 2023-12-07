@@ -9,6 +9,7 @@ import { SekcjaUslugi } from '../1/Uslugi/SekcjaUslugi';
 import { SekcjaZajeciaIndywidualne } from '../1/SekcjaZajeciaIndywidualne';
 import { SekcjaZajeciaGrupowe } from '../1/SekcjaZajeciaGrupowe';
 import { Kontakt } from '../1/Kontakt';
+import { SekcjaAktualnosciFacebook } from '../1/SekcjaAktualnosciFacebook';
 
 export const Site = ({ siteData }: { siteData: SiteI }) => {
 
@@ -17,6 +18,7 @@ export const Site = ({ siteData }: { siteData: SiteI }) => {
     uslugi: { content: <SekcjaUslugi data={siteData.uslugi.content} />, name: siteData.uslugi.nazwa },
     zajeciaIndywidualne: { content: <SekcjaZajeciaIndywidualne data={siteData.zajeciaIndywidualne.content} />, name: siteData.zajeciaIndywidualne.nazwa },
     zajeciaGrupowe: { content: <SekcjaZajeciaGrupowe data={siteData.zajeciaGrupowe.content} />, name: siteData.zajeciaGrupowe.nazwa },
+    aktualnosci: { content: <SekcjaAktualnosciFacebook data={siteData.aktualnosci.content} />, name: siteData.aktualnosci.nazwa },
     kontakt: { content: <Kontakt data={siteData.kontakt.content} />, name: siteData.kontakt.nazwa },
   }
 

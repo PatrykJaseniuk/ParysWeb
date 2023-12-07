@@ -2,13 +2,17 @@
 import { IconGithub } from "@/src/Data/2/Icons/IconGithub";
 import { KontaktI, OpcjaKontaktowaI } from "@/src/interface/1/Kontakt";
 import { ActionIcon, Button, Container, Group, SimpleGrid, TextInput, Textarea, Title, Text, Box, rem, Stack, useMantineTheme, Divider, Space } from "@mantine/core"
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconSun, IconAt, IconMapPin, IconPhone } from "@tabler/icons-react";
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconSun, IconAt, IconMapPin, IconPhone, IconBrandFacebook } from "@tabler/icons-react";
+import Link from "next/link";
 
 export const Kontakt = ({ data }: { data: KontaktI }) => {
-    const icons = social.map((Icon, index) => (
-        <ActionIcon key={index} size={28} variant="transparent">
-            <Icon size="1.4rem" stroke={1.5} />
-        </ActionIcon>
+    const icons = social.map((social, index) => (
+        <Link href={social.link}>
+            <ActionIcon key={index} size={60} variant="transparent">
+                <social.icon size="3rem" stroke={1.5} />
+            </ActionIcon>
+
+        </Link>
     ));
     const theme = useMantineTheme()
 
@@ -36,7 +40,7 @@ export const Kontakt = ({ data }: { data: KontaktI }) => {
 }
 
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
+const social = [{ link: 'https://www.facebook.com/parysnysa?locale=pl_PL', icon: IconBrandFacebook }];
 
 export function OpcjeKontaktowe({ data }: { data: OpcjaKontaktowaI[] }) {
     const items = data.map((item, index) => <OpcjaKontaktowa key={index} data={item} />);

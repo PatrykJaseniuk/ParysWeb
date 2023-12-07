@@ -15,7 +15,7 @@ type Strefy = { [key in 'wolneCiezary' | 'maszynyZeStosem' | 'cardio' | 'rozgrze
 export const strefy: Strefy = {
     wolneCiezary: {
         nazwa: "Wolne ciężary",
-        opis: " ",
+        opis: "Podstawowa sala do ćwiczeń jest wyposażona w maszyny na talerze, takie jak hamery o zmiennej geometrii ruchu, przeznaczone na wszystkie partie mięśniowe. Znajdziemy tu sztangi olimpijskie, łamane, kratownice, sztangielki, trap bar hex. Sala oferuje również szereg ławeczek skośnych, poziomych i ławeczek ze stojakami do wyciskania skośnego i poziomego. Posiadamy także suwnice Schmita, hack squat do przysiadów wypychających, oraz konstrukcje Rack z drążkami, poręczami i stojakami do przysiadów i martwych ciągów. Strefa ta, ze swoją bogatą różnorodnością maszyn, ciężarów i gryfów, jest w stanie zaskoczyć nawet najbardziej wymagające osoby.",
         media: {
             thumbnail: 'strefy/wolneCiezary.png',
             video: "strefy/wolneCiezary.mp4"
@@ -23,7 +23,7 @@ export const strefy: Strefy = {
     },
     maszynyZeStosem: {
         nazwa: "Maszyny ze stosem",
-        opis: "filmy/Bufet.mp4",
+        opis: "Strefa ta posiada dwie sale, podzielone tematycznie, z bogatą ofertą maszyn z regulacją ciężaru na stosy. Dostępność maszyn pozwala pobudzić wszystkie partie mięśniowe w różnych wariantach ruchowych oraz płaszczyznach wykonywanych ćwiczeń.",
         media: {
             thumbnail: 'strefy/maszynyZeStosem.png',
             video: "strefy/maszynyZeStosem.mp4"
@@ -31,7 +31,7 @@ export const strefy: Strefy = {
     },
     cardio: {
         nazwa: "Cardio",
-        opis: "filmy/Bufet.mp4",
+        opis: "Urządzenia do ćwiczeń aerobowych pozwalają rozgrzać termicznie nasze ciało, wzmocnić układ sercowo-naczyniowy oraz przyspieszyć metabolizm, mobilizując spalanie tkanki tłuszczowej. Bogactwo maszyn cardio, takich jak bieżnie, orbitreki, stepy, wioślarze, narciarze, rowerki poziome, pionowe i hybrydowe, umożliwia wykonanie najbardziej zaawansowanego treningu wydolnościowego.",
         media: {
             thumbnail: 'strefy/cardio.png',
             video: "strefy/cardio.mp4"
@@ -39,7 +39,7 @@ export const strefy: Strefy = {
     },
     rozgrzewka: {
         nazwa: "Sala funkcjonalna",
-        opis: "filmy/Bufet.mp4",
+        opis: "Hala przystosowana do ćwiczeń z własnym ciałem, do crossfitu, kalisteniki oraz sztuk walki. Wysoka na 7m sala posiada kratownicę z linami do podciągania, taśmami do ewolucji powietrznych, kółkami gimnastycznymi. Wyposażona jest w długą konstrukcję RAK, na której zainstalowane są drążki, poręcze, kółka, taśmy TRX, gumy do podciągania, rękawy do ćwiczeń na brzuch, uchwyty do przysiadów, poręcze gimnastyczne. Sala posiada podłoże gumowane; do dyspozycji są materace gimnastyczne, kalimaty oraz rozkładana mata do ćwiczeń sztuk walki. Na wyposażeniu mamy łapy bokserskie, osłony, tarcze bokserskie, skakanki, gumy oporowe, taśmy oporowe, rowery airbike, narciarze, piłki lekarskie, stepy, skrzynie, kettelbelle, talerze, sztangi. Bogactwo przyrządów tej sali daje możliwość przeprowadzenia każdego treningu wytrzymałościowo-siłowego, jak również specjalistycznego.",
         media: {
             thumbnail: 'strefy/rozgrzewka.png',
             video: "strefy/rozgrzewka.mp4"
@@ -55,7 +55,7 @@ export const strefy: Strefy = {
     },
     rollmasazIPlatformaWibrujaca: {
         nazwa: "Rollmasaż i platforma wibrująca",
-        opis: "filmy/Bufet.mp4",
+        opis: "Popularnie nazywana rolką, to bęben z rolek drewnianych, który obracając się wykonuje ruch masujący ciało. Bęben, obracając się, drenuje ciało, poprawiając ukrwienie, zwiększając przepływ krwi i limfy. Urządzenie to poprawia przemianę materii, usuwa wodę zbieraną podskórną, likwiduje nierówności skórne, takie jak cellulit, i ma istotny wpływ na spalanie tkanki tłuszczowej. Platforma wibrująca medyczna ma bardzo szerokie zastosowanie. Jest to biomechaniczna stymulacja mięśniowa, która powoduje pracę mięśni, rozgrzewając je, zwiększa ukrwienie, przyspiesza metabolizm i powoduje drenaż limfatyczny ciała. Jest to bardzo dobra metoda fizykalna do treningów osób z problemami narządu ruchu. Dla sportowców i osób aktywnych jest doskonałym uzupełnieniem treningu, poprzez regulację częstotliwości drgań, wywołując pracę mięśni głębokich i powierzchniowych.",
         media: {
             thumbnail: 'strefy/rollWibra.png',
             video: "strefy/rollWibra.mp4"
@@ -70,7 +70,7 @@ export const strefy: Strefy = {
 // ----------Level 1---------------------------
 const silownia: SilowniaI = {
     title: 'Siłownia',
-    opis: 'Wybierz pakiet dostępu do stref treningowych i zajęć grupowych, który najbardziej Ci odpowiada.',
+    opis: 'Wybierz dostęp do stref treningowych i zajęć grupowych, który najbardziej Ci odpowiada.',
     karnety: [
         {
             nazwa: '4 strefy',

@@ -20,6 +20,8 @@ type Story = StoryObj<typeof meta>;
 
 export const cardio: Story = {
   args: {
-    data: strefy.cardio
+    data: strefy.cardio,
+    isActive: true,
+    kolor: 'red'
   }
 };

@@ -54,7 +54,7 @@ export function Feature({ icon: Icon, title, description }: FitureI) {
             <ThemeIcon variant="light" size={isLargeScreen ? 80 : 50} radius={40}>
                 <Icon style={{ width: '80%', height: 'auto' }} />
             </ThemeIcon>
-            <Text size={isLargeScreen ? 'xl' : 'md'} mt="sm" mb={7}>
+            <Text size={'xl'} mt="sm" mb={7}>
                 {title}
             </Text>
             <Text c="dimmed" lh={1.6}>
