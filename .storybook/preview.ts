@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react';
+// import { withMantine } from './decotator';
 import { withMantine } from '../src/stories/decorator'
 
 const preview: Preview = {
@@ -13,12 +14,8 @@ const preview: Preview = {
   },
 };
 
-
-
 export const decorators = [withMantine];
 
 export default preview;
-function useEffect(arg0: () => () => any, arg1: any[]) {
-  throw new Error('Function not implemented.');
-}
+
 
