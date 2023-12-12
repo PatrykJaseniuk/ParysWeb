@@ -3,6 +3,8 @@ import { Modal, Card, Title, Divider, List, ListItem, Button, Image, Text, useMa
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
 import { CenaI } from "../../interface/2/Cena";
+import { IconCoin, IconCoinBitcoin, IconFreeRights, IconHandGrab, IconInfoCircle, IconRegistered, IconSignLeft } from "@tabler/icons-react";
+import IconFreedom from "./IconsParys/IconFreedom";
 
 export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor?: DefaultMantineColor, nazwa?: string }) => {
 
@@ -19,7 +21,17 @@ export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor
     useAnimationOffsetEffect(embla, TRANSITION_DURATION);
     return (
         <>
-            <Modal size={'100%'} opened={opened} onClose={close} title={nazwa} centered >
+            <Modal
+                size={'100%'}
+                opened={opened}
+                onClose={close}
+                title={
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%' }}>
+                        <Text size="lg" style={{ fontWeight: 'bold' }}>{nazwa}</Text>
+                    </div>
+                }
+                centered
+            >
                 <Carousel
                     // style={{ width: '100%' }}
                     getEmblaApi={setEmbla}
@@ -75,6 +87,29 @@ export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor
                         </Carousel.Slide>
                     )}
                 </Carousel>
+                <Divider my={"xs"} />
+                <List
+                    spacing={'md'}
+                >
+
+                    <ListItem
+                        icon={<div> <IconFreedom /> </div>}>
+                        {/* zmniejsz odlogłość miedzy liniami */}
+                        <Text lh={'sm'} >
+                            brak umowy
+                        </Text>
+
+                    </ListItem>
+                    <ListItem
+                        icon={<div> <IconInfoCircle /> </div>}>
+                        {/* zmniejsz odlogłość miedzy liniami */}
+                        <Text lh={'sm'} >
+                            wpisowe 15 zł
+                        </Text>
+
+                    </ListItem>
+
+                </List>
             </Modal >
             <Button color={kolor} variant="light" onClick={open}>CENNIK</Button>
         </>

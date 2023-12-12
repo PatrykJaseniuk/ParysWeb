@@ -5,7 +5,7 @@ export const zajeciaIndywidualne: ZajeciaIndywidualneI = {
     description: "Zajęcia indywidualne z trenerem",
     cennik: [
         {
-            nazwa: 'godzinny terening', cena: '60 zł', wlasciwosci: [
+            nazwa: 'godzinny terening', cena: '110 zł', wlasciwosci: [
             ]
         },
 

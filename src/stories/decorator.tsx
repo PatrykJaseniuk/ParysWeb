@@ -9,7 +9,7 @@ export const withMantine = (Story: any) => {
 
     const theme = generateTheme(1);
 
-    <MantineProvider theme={theme}>
+    return (<MantineProvider theme={theme}>
         <Story />
-    </MantineProvider>
+    </MantineProvider>)
 };
