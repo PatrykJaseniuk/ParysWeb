@@ -5,8 +5,9 @@ import '@mantine/carousel/styles.css';
 import { useEffect, useRef, useState } from "react"
 import { Cennik } from "../../2/Cennik"
 import { SectionI } from "@/src/interface/1/Section";
-import { SilowniaI, UslugaI, UslugiI, GrupaStref } from "@/src/interface/1/Uslugi";
+import { SilowniaI, UslugaI, UslugiI, } from "@/src/interface/1/Uslugi";
 import { Silownia } from "./Silownia";
+import { Kalendaz } from "../Kalendarz";
 
 export const SekcjaUslugi = ({ data }: { data: SectionI<UslugiI> }) => {
     return (
@@ -33,6 +34,7 @@ const Usluga = ({ data }: { data: UslugaI }) => {
                         {data.description}
                     </Text>
                     {data.cennik.length > 0 && <Cennik data={data.cennik} />}
+                    {data.kalendarz && <Kalendaz data={data.kalendarz} />}
                 </Stack>
                 <Video src={data.videoSrc} />
             </SimpleGrid>

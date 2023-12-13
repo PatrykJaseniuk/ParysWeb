@@ -1,8 +1,8 @@
-import { SilowniaI, StrefaI, UslugaI, UslugiI, GrupaStref } from "@/src/interface/1/Uslugi";
+import { SilowniaI, StrefaI, UslugaI, UslugiI, } from "@/src/interface/1/Uslugi";
 import { cardio } from "@/src/stories/1/Uslugi/Strefa.stories";
 import { keys } from "@mantine/core";
 import { zajeciaGrupowe } from "./ZajeciaGrupowe";
-import { Icon24Hours, IconCalendar, IconClock, IconDoorEnter, IconGif, IconInfinity, IconInfoCircle, IconTableHeart, IconUsersGroup } from "@tabler/icons-react";
+import { Icon24Hours, IconCalendar, IconClock, IconDoorEnter, IconGif, IconInfinity, IconInfoCircle, IconLock, IconTableHeart, IconUsersGroup } from "@tabler/icons-react";
 import { IconVerifed } from "../2/Icons/IconVerified";
 import { IconGift } from "@tabler/icons-react";
 
@@ -51,7 +51,8 @@ export const strefy: Strefy = {
         media: {
             thumbnail: 'strefy/cross.png',
             video: "strefy/cross.mp4"
-        }
+        },
+        kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showTitle=1&showNav=0&showPrint=0&showTabs=0&mode=WEEK&showCalendars=0&showTz=0&title=Dost%C4%99pno%C5%9B%C4%87%20sali&src=MWt1M280MjcyZnVvMWg2bDFjY200cGJsYW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=azJsbjN0Z3B0cTZrNmFubXY2amZrczNzbW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23795548&color=%23D50000'
     },
     rollmasazIPlatformaWibrujaca: {
         nazwa: "Rollmasaż i platforma wibrująca",
@@ -59,7 +60,8 @@ export const strefy: Strefy = {
         media: {
             thumbnail: 'strefy/rollWibra.png',
             video: "strefy/rollWibra.mp4"
-        }
+        },
+        kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showNav=1&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=MG44bzgwdGk2OTBodmRxZmpmMzY0ZGhjZDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23009688'
     },
 }
 
@@ -88,6 +90,7 @@ const silownia: SilowniaI = {
                         { icon: IconCalendar, text: 'ważny 1 miesiąc' },
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -96,7 +99,8 @@ const silownia: SilowniaI = {
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
                         { icon: IconInfoCircle, text: 'Uczniowie lub studenci do 26 roku życia' },
-                        { icon: IconInfoCircle, text: 'Seniorzy od 68 roku życia' },
+                        { icon: IconInfoCircle, text: 'Seniorzy od 67 roku życia' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -105,7 +109,7 @@ const silownia: SilowniaI = {
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: IconClock, text: 'wejście od 8-00 do 15-00' },
                         { icon: IconInfoCircle, text: 'Uczniowie lub studenci do 26 roku życia' },
-
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -143,6 +147,7 @@ const silownia: SilowniaI = {
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
                         { icon: IconGift, text: 'dwa miesiące gratis' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -188,6 +193,7 @@ const silownia: SilowniaI = {
                         { icon: IconCalendar, text: 'ważny 1 miesiąc' },
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -204,6 +210,7 @@ const silownia: SilowniaI = {
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
                         { icon: IconGift, text: 'dwa miesiące gratis' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
             ],
@@ -233,6 +240,7 @@ const silownia: SilowniaI = {
                         { icon: IconCalendar, text: 'ważny 1 miesiąc' },
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -271,6 +279,7 @@ const silownia: SilowniaI = {
                         { icon: IconCalendar, text: 'ważny 1 miesiąc' },
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -294,6 +303,7 @@ const silownia: SilowniaI = {
                         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                         { icon: Icon24Hours, text: 'całodobowy dostęp' },
                         { icon: IconGift, text: 'dwa miesiące gratis' },
+                        { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                     ]
                 },
                 {
@@ -340,7 +350,8 @@ const uslugiStandardowe: UslugaI[] = [
                     text: '1 godzina gry'
                 }]
             },
-        ]
+        ],
+        kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showTitle=1&showNav=0&showPrint=0&showTabs=0&mode=WEEK&showCalendars=0&showTz=0&title=Dost%C4%99pno%C5%9B%C4%87%20sali&src=MWt1M280MjcyZnVvMWg2bDFjY200cGJsYW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=azJsbjN0Z3B0cTZrNmFubXY2amZrczNzbW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23795548&color=%23D50000'
     },
     {
         title: 'Sauna',
@@ -358,7 +369,8 @@ const uslugiStandardowe: UslugaI[] = [
                 }
                 ]
             },
-        ]
+        ],
+        kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showTitle=1&showNav=1&showDate=0&showPrint=0&showTabs=0&showTz=0&showCalendars=0&mode=WEEK&src=ODYyOTdlNTk1Y2E0OTlhMTc2ZDMxMGU4YjNlOWVlNjAzN2E3NTljOGNkZjJiYWUyYmFkNDBkZjg1MjI2YzYzYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E'
     },
     {
         title: 'Masaż',

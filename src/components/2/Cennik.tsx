@@ -76,7 +76,7 @@ export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor
                                             <ListItem key={index}
                                                 icon={<div> <wlasciwosc.icon /> </div>}>
                                                 {/* zmniejsz odlogłość miedzy liniami */}
-                                                <Text lh={'sm'} key={index}>
+                                                <Text lh={'xs'} key={index}>
                                                     {wlasciwosc.text}
                                                 </Text>
                                             </ListItem>

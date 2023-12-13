@@ -1,6 +1,7 @@
 import { DefaultMantineColor, MantineColorsTuple } from "@mantine/core";
 import { CenaI as CenaI } from "../2/Cena";
 import { ZajecieI as ZajecieGrupoweI } from "./ZajeciaGrupowe";
+import { Url } from "url";
 
 export interface UslugiI {
     silownia: SilowniaI,
@@ -11,7 +12,6 @@ export interface SilowniaI {
     opis: string
     wszystkieStrefy: StrefaI[]
     wszystkieZajeciaGrupowe: ZajecieGrupoweI[]
-    // typyKarnetów: TypyKarnetow,
     karnety: KarnetI[]
 }
 
@@ -28,14 +28,9 @@ export interface UslugaI {
     description: string,
     videoSrc: string,
     cennik: CenaI[]
+    kalendarz?: string
 }
 
-export interface GrupaStref {
-    nazwa: string,
-    opis: string,
-    Strefy: StrefaI[],
-    cena: number
-}
 
 export interface StrefaI {
     nazwa: string;
@@ -44,19 +39,7 @@ export interface StrefaI {
         video: string;
         thumbnail: string;
     };
+    kalendarz?: string;
 }
-
-// export type TypyKarnetow = {
-//     okresowy: Wariant[],
-//     wejsciowy: Wariant[],
-// }
-
-// export type Wariant = {
-//     nazwa: string,
-//     mnoznikCeny: number,
-//     waznyPrzez: string,
-//     iloscDostepnychWizyt: string
-// }
-
 
 

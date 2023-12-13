@@ -1,6 +1,7 @@
 import { StrefaI } from "@/src/interface/1/Uslugi";
 import { useMantineTheme, Card, Image, Text, Modal, DefaultMantineColor } from "@mantine/core";
 import { useState } from "react";
+import { Kalendaz } from "../Kalendarz";
 
 
 export const Strefa = ({ data, isActive, kolor }: { data: StrefaI, isActive: boolean, kolor: DefaultMantineColor }) => {
@@ -87,6 +88,7 @@ export const StrefaModal = ({ data, opened, onClose }: { data: StrefaI, opened: 
                 </video>
 
                 <Text size="md" style={{ marginBottom: theme.spacing.xs }}>{data.opis}</Text>
+                {data.kalendarz && <Kalendaz data={data.kalendarz} />}
             </div>
         </Modal>
     );
