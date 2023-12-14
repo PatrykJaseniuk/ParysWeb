@@ -3,8 +3,8 @@ import { SVGProps } from "react"
 const IconFreedom = (props: SVGProps<SVGSVGElement>) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={'1.2em'}
-        height={'1.2em'}
+        width={'25px'}
+        height={'25px'}
         viewBox="0 0 261 250"
         stroke="currentColor"
         strokeWidth={8}

@@ -2,11 +2,11 @@ import { Embla, useAnimationOffsetEffect, Carousel } from "@mantine/carousel";
 import { Modal, Card, Title, Divider, List, ListItem, Button, Image, Text, useMantineColorScheme, useMantineTheme, DefaultMantineColor } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
-import { CenaI } from "../../interface/2/Cena";
+import { CennikI } from "../../interface/2/Cennik";
 import { IconCoin, IconCoinBitcoin, IconFreeRights, IconHandGrab, IconInfoCircle, IconRegistered, IconSignLeft } from "@tabler/icons-react";
 import IconFreedom from "./IconsParys/IconFreedom";
 
-export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor?: DefaultMantineColor, nazwa?: string }) => {
+export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CennikI, kolor?: DefaultMantineColor, nazwa?: string }) => {
 
 
     const colorSheme = useMantineColorScheme()
@@ -39,7 +39,7 @@ export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor
                     slideSize={{ base: '100%', xs: '100%', sm: '50%', md: '33.333333%', lg: '25%', xl: '20%' }}
                     align={'start'}
                 >
-                    {data.map((cena, index) =>
+                    {data.ceny.map((cena, index) =>
                         <Carousel.Slide key={index} >
                             <Card shadow="sm" mx={'xl'} padding="xl" radius="md" withBorder>
                                 {
@@ -91,24 +91,17 @@ export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CenaI[], kolor
                 <List
                     spacing={'md'}
                 >
-
-                    <ListItem
-                        icon={<div> <IconFreedom /> </div>}>
-                        {/* zmniejsz odlogłość miedzy liniami */}
-                        <Text lh={'sm'} >
-                            brak umowy
-                        </Text>
-
-                    </ListItem>
-                    <ListItem
-                        icon={<div> <IconInfoCircle /> </div>}>
-                        {/* zmniejsz odlogłość miedzy liniami */}
-                        <Text lh={'sm'} >
-                            wpisowe 15 zł
-                        </Text>
-
-                    </ListItem>
-
+                    {data.wlasciwosciWspolne.map((wlasciwosc, index) => {
+                        return (
+                            <ListItem key={index}
+                                icon={<div> <wlasciwosc.icon /> </div>}>
+                                {/* zmniejsz odlogłość miedzy liniami */}
+                                <Text lh={'xs'} key={index}>
+                                    {wlasciwosc.text}
+                                </Text>
+                            </ListItem>
+                        )
+                    })}
                 </List>
             </Modal >
             <Button color={kolor} variant="light" onClick={open}>CENNIK</Button>

@@ -22,7 +22,7 @@ export const Tytul = ({ data }: { data: HeaderI }) => {
                 imgSrc="zasoby/SilowniaBackground.png"
             >
                 {/* <Overlay backgroundOpacity={0} color={'blue'} /> */}
-                <Container opacity={1} size={'xl'}>
+                <Container pt={'lg'} opacity={1} size={'xl'}>
 
                     <SimpleGrid
                         cols={{ sm: 1, md: 2 }}

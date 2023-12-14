@@ -7,7 +7,7 @@ import { generateTheme } from '../theme';
 
 export const withMantine = (Story: any) => {
 
-    const theme = generateTheme(1);
+    const theme = generateTheme();
 
     return (<MantineProvider theme={theme}>
         <Story />

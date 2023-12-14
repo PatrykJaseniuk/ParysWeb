@@ -22,7 +22,7 @@ export const kontakt: KontaktI = {
         },
         {
             nazwa: 'Godziny otwarcia recepcji',
-            opis: ['pon - pt: 9:00 - 21:00', 'sob: 9:00- 14:00'],
+            opis: ['pon - pt: 8:00 - 22:00', 'sob: 9:00- 14:00'],
             icon: IconSun
         },
     ]

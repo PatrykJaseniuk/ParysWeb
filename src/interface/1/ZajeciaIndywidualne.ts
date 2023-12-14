@@ -1,8 +1,8 @@
-import { CenaI as CenaI } from "../2/Cena"
+import { CennikI } from "../2/Cennik"
 
 export interface ZajeciaIndywidualneI {
     description: string,
-    cennik: CenaI[],
+    cennik: CennikI,
     trenerzy: TrenerI[]
 }
 

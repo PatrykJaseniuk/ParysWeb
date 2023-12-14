@@ -3,13 +3,16 @@ import { ZajeciaIndywidualneI } from "@/src/interface/1/ZajeciaIndywidualne"
 
 export const zajeciaIndywidualne: ZajeciaIndywidualneI = {
     description: "Zajęcia indywidualne z trenerem",
-    cennik: [
-        {
-            nazwa: 'godzinny terening', cena: '110 zł', wlasciwosci: [
-            ]
-        },
+    cennik: {
+        wlasciwosciWspolne: [],
+        ceny: [
+            {
+                nazwa: 'godzinny terening', cena: '110 zł', wlasciwosci: [
+                ]
+            },
 
-    ],
+        ]
+    },
     trenerzy: [
         {
             name: 'Krzysztof',

@@ -1,7 +1,7 @@
 import { useDisclosure, useMediaQuery, useScrollIntoView, useWindowScroll } from "@mantine/hooks"
 import { SekcjaUslugi } from "../1/Uslugi/SekcjaUslugi";
 import { sekcjaUslugi } from "@/src/Data/1/Section";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Component, useEffect, useRef, useState } from "react";
 import { Box, Burger, Button, Container, Divider, Flex, Group, Stack, useMantineColorScheme, useMantineTheme } from "@mantine/core";
 import { Kontakt } from "../1/Kontakt";
 import { SekcjaAktualnosciFacebook } from "../1/SekcjaAktualnosciFacebook";
@@ -11,6 +11,7 @@ import { Tytul } from "../1/Tytul";
 import { SiteI } from "@/src/interface/0top/Site";
 import { ColorSchemeToggle } from "../2/ColorSchemeToggle";
 import { IconParysLogo } from "../2/IconsParys/IconParysLogo";
+import { Promocja } from "../1/Promocja";
 
 type ElementsForNavigation = { name: string, scroll: () => void }[]
 
@@ -18,8 +19,6 @@ type ElementsForNavigation = { name: string, scroll: () => void }[]
 export const Shell = ({ data }: { data: SiteI }) => {
 
     const isMobile = useMediaQuery('(max-width: 1000px)');
-
-
     const site = {
         header: { content: <Tytul data={data.header.content} />, name: data.header.nazwa },
         uslugi: { content: <SekcjaUslugi data={data.uslugi.content} />, name: data.uslugi.nazwa },
@@ -58,6 +57,9 @@ export const Shell = ({ data }: { data: SiteI }) => {
     const compponentsForMain = elementsForMain.map((element) =>
         <div ref={element.targetRef}>{element.content}</div>)
 
+
+    compponentsForMain.push(<Promocja />)
+
     return (
         <div>
             {isMobile ?
@@ -80,17 +82,22 @@ const MobileShell = ({ data, children }: { data: ElementsForNavigation, children
         justifyContent: 'space-between',
         width: '100%',
         backgroundColor: backgroundColor,
-        paddingTop: '3px'
+        paddingTop: '0.5em',
+        paddingInline: '1em'
     }
 
     return (
         <div>
             <SlidingBar>
                 <div style={barStyle}>
+                    <Box style={{ width: '4rem' }}><IconParysLogo mini /></Box>
+
                     <SiteBar
                         content={(close) =>
                             <Container style={{ backgroundColor: backgroundColor, }}>
+
                                 <Divider m={'md'} />
+
                                 <Stack>
                                     {data.map((element) => (
                                         <Button fullWidth
@@ -107,14 +114,11 @@ const MobileShell = ({ data, children }: { data: ElementsForNavigation, children
                                         <Button variant="default">Log in</Button>
                                         <ColorSchemeToggle />
                                     </Group>
-
-
                                 </Stack>
+
                             </Container>
                         }
                     />
-                    <Box style={{ width: '4rem' }}><IconParysLogo mini /></Box>
-
                 </div>
             </SlidingBar>
             {children}
@@ -134,13 +138,12 @@ const SiteBar = ({ content }: { content: (close: () => void) => React.ReactNode 
     useEffect(() => {
         const overflow = isOpen ? 'hidden' : 'unset';
         document.body.style.overflow = overflow;
-
     }, [isOpen])
 
-
-
     const siteBarStyle: React.CSSProperties = {
-        position: 'absolute',
+        // top: 0,
+        left: 0,
+        position: 'fixed',
         width: isOpen ? '100%' : '0', // Ustaw szerokość na 100% gdy otwarty, 0 gdy zamknięty
         overflow: 'hidden', // Ukryj zawartość poza szerokością panelu
         transition: 'width 0.3s ease-in-out', // Animacja przejścia
@@ -148,6 +151,7 @@ const SiteBar = ({ content }: { content: (close: () => void) => React.ReactNode 
         background: backgroundColor
     }
 
+    const cont = content(toggle);
 
     return (
         <div style={{ display: 'flex', flexFlow: 'column' }}>

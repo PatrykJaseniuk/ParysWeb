@@ -33,7 +33,7 @@ const Usluga = ({ data }: { data: UslugaI }) => {
                     <Text>
                         {data.description}
                     </Text>
-                    {data.cennik.length > 0 && <Cennik data={data.cennik} />}
+                    {data.cennik && <Cennik data={data.cennik} />}
                     {data.kalendarz && <Kalendaz data={data.kalendarz} />}
                 </Stack>
                 <Video src={data.videoSrc} />

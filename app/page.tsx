@@ -1,6 +1,5 @@
 'use client';
 import { Shell } from '@/src/components/0/Shell';
-import { Site } from '@/src/components/0/Site';
 import { site } from '@/src/Data/0top/Site';
 import { generateTheme } from '@/src/theme';
 import { MantineProvider } from '@mantine/core';
@@ -22,7 +21,7 @@ export default function HomePage() {
   }
   const scaleValue = scale[size];
   return (
-    <MantineProvider theme={generateTheme(scaleValue)}>
+    <MantineProvider theme={generateTheme()}>
       {/* <Site siteData={site} /> */}
       <Shell data={site} />
     </MantineProvider>
