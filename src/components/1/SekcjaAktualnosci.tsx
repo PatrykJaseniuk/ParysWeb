@@ -9,7 +9,7 @@ export const SekcjaAktualnosci = ({ data }: { data: SectionI<AktualnosciFacebook
     return (
         <Sekcja data={{ title: 'Aktualności', background: "" }}>
             <Container size={'xl'}>
-                <TwitterTimeline />
+                {/* <TwitterTimeline /> */}
             </Container>
             <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center', justifyItems: 'center', alignItems: 'center', marginBottom: '1rem' }}>
 
