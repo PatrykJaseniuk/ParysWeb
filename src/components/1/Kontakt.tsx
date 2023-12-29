@@ -25,8 +25,9 @@ export const Kontakt = ({ data }: { data: KontaktI }) => {
                         <OpcjeKontaktowe data={data.opcjeKontaktowe} />
                         <Group mt="xl">{icons}</Group>
                     </Container>
-                    <iframe title="mapa Google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.8985260142413!2d17.32172837733394!3d50.4802327852178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711c4125f989f0b%3A0xb3c7ba6aef95e9fb!2sSI%C5%81OWNIA%20Parys%20Nysa!5e0!3m2!1spl!2spl!4v1689690588688!5m2!1spl!2spl" style={{ width: '100%', height: '40rem' }} loading="lazy" >
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1269.449756421455!2d17.324211918625632!3d50.48021441438569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711c4125f989f0b%3A0xb3c7ba6aef95e9fb!2sSI%C5%81OWNIA%20Parys%20Nysa%2024%2F7!5e0!3m2!1spl!2spl!4v1703884164412!5m2!1spl!2spl" allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" style={{ width: '100%', height: '40rem' }}> </iframe>
+                    {/* <iframe title="mapa Google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.8985260142413!2d17.32172837733394!3d50.4802327852178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711c4125f989f0b%3A0xb3c7ba6aef95e9fb!2sSI%C5%81OWNIA%20Parys%20Nysa!5e0!3m2!1spl!2spl!4v1689690588688!5m2!1spl!2spl" style={{ width: '100%', height: '40rem' }} loading="lazy" >
+                    </iframe> */}
                 </SimpleGrid>
                 <Divider c={'red'} size={'md'} mt={'md'} />
                 <Group __size={'sm'} align="end" justify="end" p="md">
