@@ -41,7 +41,7 @@ const Zajecie = ({ data }: { data: ZajecieI }) => {
                     </Text>
                     <Kalendaz data={data.kalendazUrl} />
                 </Stack>
-                <Image radius={'xl'} width={'100%'} height={'auto'} src={data.imgSrc} />
+                <Image loading="lazy" radius={'xl'} width={'100%'} height={'auto'} src={data.imgSrc} />
             </SimpleGrid>
             <Divider size={'xl'} m={"xl"} />
         </Container>

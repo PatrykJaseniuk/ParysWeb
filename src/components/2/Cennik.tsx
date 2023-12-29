@@ -46,6 +46,7 @@ export const Cennik = ({ data, kolor, nazwa = 'cennik' }: { data: CennikI, kolor
                                     cena.imgSrc &&
                                     <Card.Section m='md'>
                                         <Image
+                                            loading="lazy"
                                             src={cena.imgSrc}
                                             h={150}
                                             // w="auto"

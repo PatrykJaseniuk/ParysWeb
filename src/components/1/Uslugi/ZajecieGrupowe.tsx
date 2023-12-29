@@ -49,7 +49,7 @@ export const ZajecieGrupowe = ({ data, isActive, kolor }: { data: ZajecieI, isAc
             >
                 <Card.Section>
 
-                    <Image src={data.imgSrc} width="100%" />
+                    <Image loading="lazy" src={data.imgSrc} width="100%" />
                 </Card.Section>
                 <Text size="md" style={{ marginTop: theme.spacing.sm }}>
                     {data.title}
@@ -80,6 +80,7 @@ const ZajecieModal = ({ data, opened, onClose }: { data: ZajecieI, opened: boole
             <div style={{ textAlign: 'center' }}>
 
                 <video
+                    preload="none"
                     autoPlay
                     loop
                     muted

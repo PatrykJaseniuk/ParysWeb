@@ -60,7 +60,8 @@ export const Video = ({ src }: { src: string }) => {
             ref={ref}>
             <video
                 ref={videoRef}
-                autoPlay
+                // autoPlay
+                preload="none"
                 loop
                 muted
                 style={{ width: '100%', objectFit: 'cover', borderRadius: '10%' }}

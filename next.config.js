@@ -8,4 +8,5 @@ module.exports = withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   output: 'export',
+  images: { unoptimized: true }
 });

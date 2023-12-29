@@ -47,7 +47,7 @@ export const Strefa = ({ data, isActive, kolor }: { data: StrefaI, isActive: boo
                 onClick={() => setModalOpened(true)}
             >
                 <Card.Section>
-                    <Image src={data.media.thumbnail} width="100%" />
+                    <Image loading="lazy" src={data.media.thumbnail} width="100%" />
                 </Card.Section>
                 <Text size="md" style={{ marginTop: theme.spacing.sm }}>
                     {data.nazwa}
@@ -73,8 +73,8 @@ export const StrefaModal = ({ data, opened, onClose }: { data: StrefaI, opened: 
     return (
         <Modal opened={opened} onClose={onClose} title={<div style={modalTitleStyle}>{data.nazwa}</div>} size="lg" >
             <div style={{ textAlign: 'center' }}>
-
                 <video
+                    preload="none"
                     autoPlay
                     loop
                     muted
@@ -82,8 +82,10 @@ export const StrefaModal = ({ data, opened, onClose }: { data: StrefaI, opened: 
                     width="100%"
                     style={{ maxWidth: '100%', marginBottom: theme.spacing.md }}
                     onContextMenu={(e) => e.preventDefault()}
+                    src={data.media.video}
+                    poster={data.media.thumbnail}
                 >
-                    <source src={data.media.video} type="video/mp4" />
+                    {/* <source src={data.media.video} type="video/mp4" /> */}
                     Your browser does not support the video tag.
                 </video>
 

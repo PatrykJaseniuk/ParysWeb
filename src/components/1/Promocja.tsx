@@ -1,6 +1,7 @@
-import { Card, Divider, List, ListItem, Modal, Title, Image, Text, Button, Center } from "@mantine/core"
+import { Card, Image, Divider, List, ListItem, Modal, Title, Text, Button, Center } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import { IconCalendar, IconInfinity, IconClock, IconInfoCircle, IconLock } from "@tabler/icons-react"
+
 import { useEffect } from "react"
 
 export const Promocja = () => {
@@ -26,7 +27,10 @@ export const Promocja = () => {
             {/* <Card shadow="sm" mx={'xl'} padding="xl" radius="md" withBorder>
                 <Card.Section m='md'> */}
             <Image
+                // quality={10}
+                // alt="Student 99zł"
                 src='promocja2.png'
+                loading="lazy"
                 // h={150}
                 // w="auto"
                 fit="contain"
