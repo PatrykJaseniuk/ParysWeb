@@ -40,11 +40,24 @@ export const generateTheme = () => {
         "#ee7679",
         "#e84d52",
         "#e43338",
-        "#e31e24",
+        // "#e31e24"
+        "#cb171d",
         "#cb171d",
         "#b50e19",
         "#9f0012"
       ],
+      blue: [
+        "#e1f9ff",
+        "#ccedff",
+        "#9ad7ff",
+        "#64c1ff",
+        "#3baefe",
+        "#20a2fe",
+        "#099cff",
+        "#0088e4",
+        "#0b259c",
+        "#0069b6"
+      ]
     },
     primaryColor: 'red',
     fontSizes: {

@@ -48,7 +48,7 @@ const Trenerzy = ({ data }: { data: TrenerI[] }) => {
             <Text fz="md" fw={500} mt="md">
                 {trener.name}
             </Text>
-            <Text fz="sm" c="dimmed" mt="sm">
+            <Text fz="sm" opacity={0.7} mt="sm">
                 {trener.description}
             </Text>
         </Card>

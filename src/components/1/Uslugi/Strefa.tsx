@@ -28,7 +28,7 @@ export const Strefa = ({ data, isActive, kolor }: { data: StrefaI, isActive: boo
     // Styl dla nieaktywnego komponentu
     const inactiveStyle = {
         shadow: 'sm',
-        opacity: 0.5,
+        opacity: 0.7,
         filter: 'grayscale(100%)',
         borderColor: 'transparent' // przeźroczysta ramka dla nieaktywnego komponentu
     };
@@ -47,7 +47,7 @@ export const Strefa = ({ data, isActive, kolor }: { data: StrefaI, isActive: boo
                 onClick={() => setModalOpened(true)}
             >
                 <Card.Section>
-                    <Image loading="lazy" src={data.media.thumbnail} width="100%" />
+                    <Image alt={data.nazwa} loading="lazy" src={data.media.thumbnail} width="100%" />
                 </Card.Section>
                 <Text size="md" style={{ marginTop: theme.spacing.sm }}>
                     {data.nazwa}
@@ -71,7 +71,7 @@ export const StrefaModal = ({ data, opened, onClose }: { data: StrefaI, opened: 
         marginBottom: theme.spacing.md, // Margines na dole
     };
     return (
-        <Modal opened={opened} onClose={onClose} title={<div style={modalTitleStyle}>{data.nazwa}</div>} size="lg" >
+        <Modal opened={opened} onClose={onClose} title={<div style={modalTitleStyle}>{data.nazwa}</div>} size="xl" >
             <div style={{ textAlign: 'center' }}>
                 <video
                     preload="none"

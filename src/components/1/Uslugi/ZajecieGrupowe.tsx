@@ -29,7 +29,7 @@ export const ZajecieGrupowe = ({ data, isActive, kolor }: { data: ZajecieI, isAc
     // Styl dla nieaktywnego komponentu
     const inactiveStyle = {
         shadow: 'sm',
-        opacity: 0.5,
+        opacity: 0.7,
         filter: 'grayscale(100%)',
         borderColor: 'transparent' // przeźroczysta ramka dla nieaktywnego komponentu
     };
@@ -49,7 +49,7 @@ export const ZajecieGrupowe = ({ data, isActive, kolor }: { data: ZajecieI, isAc
             >
                 <Card.Section>
 
-                    <Image loading="lazy" src={data.imgSrc} width="100%" />
+                    <Image alt={data.title} loading="lazy" src={data.imgSrc} width="100%" />
                 </Card.Section>
                 <Text size="md" style={{ marginTop: theme.spacing.sm }}>
                     {data.title}

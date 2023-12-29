@@ -57,7 +57,7 @@ export function Feature({ icon: Icon, title, description }: FitureI) {
             <Text size={'xl'} mt="sm" mb={7}>
                 {title}
             </Text>
-            <Text c="dimmed" lh={1.6}>
+            <Text opacity={0.7} lh={1.6}>
                 {description}
             </Text>
         </div>

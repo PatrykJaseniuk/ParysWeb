@@ -27,6 +27,7 @@ export const Promocja = () => {
             {/* <Card shadow="sm" mx={'xl'} padding="xl" radius="md" withBorder>
                 <Card.Section m='md'> */}
             <Image
+                alt="promocja"
                 // quality={10}
                 // alt="Student 99zł"
                 src='promocja2.png'

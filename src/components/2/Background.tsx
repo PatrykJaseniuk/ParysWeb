@@ -1,5 +1,4 @@
 import { CSSProperties } from "react"
-import { Image, Overlay } from "@mantine/core"
 
 export const Background = ({ children, imgSrc, style }: { children?: React.ReactNode, imgSrc?: string, style?: CSSProperties }) => {
     return (
@@ -9,14 +8,17 @@ export const Background = ({ children, imgSrc, style }: { children?: React.React
                 height: '100%',
                 width: '100%',
             }}>
-                <img src={imgSrc} style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    opacity: 0.5,
-                    ...style
+                <img
+                    alt="background"
+                    src={imgSrc}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        opacity: 0.5,
+                        ...style
 
-                }} />
+                    }} />
             </div>
             <div style={{ position: 'relative' }}>
                 {children}
