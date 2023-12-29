@@ -18,7 +18,7 @@ type ElementsForNavigation = { name: string, scroll: () => void }[]
 
 export const Shell = ({ data }: { data: SiteI }) => {
 
-    const isMobile = useMediaQuery('(max-width: 1000px)');
+    const isMobile = useMediaQuery('(max-width: 1000px)', true);
     const site = {
         header: { content: <Tytul data={data.header.content} />, name: data.header.nazwa },
         uslugi: { content: <SekcjaUslugi data={data.uslugi.content} />, name: data.uslugi.nazwa },
