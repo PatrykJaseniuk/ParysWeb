@@ -12,8 +12,12 @@ import { SiteI } from "@/src/interface/0top/Site";
 import { ColorSchemeToggle } from "../2/ColorSchemeToggle";
 import { IconParysLogo } from "../2/IconsParys/IconParysLogo";
 import { Promocja } from "../1/Promocja";
+import { WithContext, BreadcrumbList } from "schema-dts";
 
 type ElementsForNavigation = { name: string, scroll: () => void }[]
+
+
+
 
 
 export const Shell = ({ data }: { data: SiteI }) => {
@@ -51,17 +55,59 @@ export const Shell = ({ data }: { data: SiteI }) => {
 
     const elementsForMain = elementsWithScrollIntoView.map((element) => ({
         content: element.content,
-        targetRef: element.scrollIntoView.targetRef
+        targetRef: element.scrollIntoView.targetRef,
+        id: element.name
     }))
 
     const compponentsForMain = elementsForMain.map((element) =>
-        <div ref={element.targetRef}>{element.content}</div>)
+        <div id={element.id} ref={element.targetRef}>{element.content}</div>)
 
 
     compponentsForMain.push(<Promocja />)
 
+
+    const breadcrumbList: WithContext<BreadcrumbList> = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement':
+            //  [
+            //     {
+            //         '@type': 'ListItem',
+            //         'position': 1,
+            //         'item': {
+            //             '@id': 'https://parys.nysa.pl/',
+            //             'name': 'Strona główna'
+            //         }
+            //     },
+            //     {
+            //         '@type': 'ListItem',
+            //         'position': 2,
+            //         'item': {
+            //             '@id': 'https://parys.nysa.pl/sport',
+            //             'name': 'Dział Sportowy'
+            //         }
+            //     }
+            //     // Możesz dodać więcej elementów
+            // ]
+            elementsForNavigation.map((element, index) => ({
+                '@type': 'ListItem',
+                'position': index,
+                'item': {
+                    '@id': `https://parys.nysa.pl#${element.name}`,
+                    'name': element.name
+                }
+            }))
+    };
+
+
+
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+            />
+
             {isMobile ?
                 <MobileShell data={elementsForNavigation}> {compponentsForMain} </MobileShell>
                 :

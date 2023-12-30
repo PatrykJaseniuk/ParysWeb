@@ -10,8 +10,10 @@ import { Silownia } from "./Silownia";
 import { Kalendaz } from "../Kalendarz";
 
 export const SekcjaUslugi = ({ data }: { data: SectionI<UslugiI> }) => {
+
     return (
         <Sekcja data={data.section}>
+
             <Silownia data={data.content.silownia} />
             {data.content.uslugiStandardowe.map((usluga, index) =>
                 <Usluga key={index} data={usluga} />
