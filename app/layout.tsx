@@ -16,7 +16,6 @@ import { BreadcrumbList, ListItem, WithContext } from 'schema-dts';
 export const metadata: Metadata = {
   title: 'Sport Studio Parys',
   description: 'Nie pozwól aby przypadek uformował Twoje ciało!',
-
 };
 
 export default function RootLayout({ children }: { children: any }) {
@@ -37,7 +36,7 @@ export default function RootLayout({ children }: { children: any }) {
         </script> */}
 
 
-        <link rel="shortcut icon" href="IconParysLogoMini.svg" />
+        <link rel="icon" type="image/svg+xml" href="IconParysLogoMini.svg" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

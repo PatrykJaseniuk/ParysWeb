@@ -63,7 +63,7 @@ export const Shell = ({ data }: { data: SiteI }) => {
         <div id={element.id} ref={element.targetRef}>{element.content}</div>)
 
 
-    compponentsForMain.push(<Promocja />)
+    // compponentsForMain.push(<Promocja />)
 
 
     const breadcrumbList: WithContext<BreadcrumbList> = {
@@ -92,10 +92,8 @@ export const Shell = ({ data }: { data: SiteI }) => {
             elementsForNavigation.map((element, index) => ({
                 '@type': 'ListItem',
                 'position': index,
-                'item': {
-                    '@id': `https://parys.nysa.pl#${element.name}`,
-                    'name': element.name
-                }
+                'name': element.name,
+                'item': `https://parys.nysa.pl#${element.name}`
             }))
     };
 
