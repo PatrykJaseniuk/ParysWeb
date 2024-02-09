@@ -2,10 +2,11 @@ import { SilowniaI, StrefaI, UslugaI, UslugiI, } from "@/src/interface/1/Uslugi"
 import { cardio } from "@/src/stories/1/Uslugi/Strefa.stories";
 import { keys } from "@mantine/core";
 import { zajeciaGrupowe } from "./ZajeciaGrupowe";
-import { Icon24Hours, IconCalendar, IconChessKing, IconClock, IconDoorEnter, IconFreeRights, IconGif, IconInfinity, IconInfoCircle, IconLock, IconTableHeart, IconUsersGroup } from "@tabler/icons-react";
+import { Icon24Hours, IconCalendar, IconChessKing, IconClock, IconDoorEnter, IconFreeRights, IconGif, IconInfinity, IconInfoCircle, IconLock, IconMoodSad, IconMoodSad2, IconMoodSadDizzy, IconMoodSadFilled, IconTableHeart, IconUsersGroup } from "@tabler/icons-react";
 import { IconVerifed } from "../2/Icons/IconVerified";
 import { IconGift } from "@tabler/icons-react";
 import IconFreedom from "@/src/components/2/IconsParys/IconFreedom";
+import { IconMoodSadSquint } from "@tabler/icons-react";
 
 // definicje pogrupowane w warstwy
 
@@ -158,7 +159,7 @@ const silownia: SilowniaI = {
                     },
                     {
                         imgSrc: 'zasoby/multisport.png', nazwa: '', cena: '', wlasciwosci: [
-                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                            { icon: IconClock, text: 'dostęp w godzinach otwarcia recepcji' },
                         ]
                     },
                     {
@@ -331,7 +332,7 @@ const silownia: SilowniaI = {
                     },
                     {
                         imgSrc: 'zasoby/multisport.png', nazwa: '', cena: '', wlasciwosci: [
-                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                            { icon: IconClock, text: 'dostęp w godzinach otwarcia recepcji' },
                         ]
                     },
                     {
