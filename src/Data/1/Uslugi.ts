@@ -111,7 +111,7 @@ const silownia: SilowniaI = {
                         ]
                     },
                     {
-                        nazwa: 'MIESIĘCZNY uczeń do 15', cena: '99 zł', wlasciwosci: [
+                        nazwa: 'MIESIĘCZNY uczeń do 15', cena: '119 zł', wlasciwosci: [
                             { icon: IconCalendar, text: 'ważny 1 miesiąc' },
                             { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
                             { icon: IconClock, text: 'wejście od 0-00 do 15-00' },
