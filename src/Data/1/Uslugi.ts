@@ -110,15 +110,15 @@ const silownia: SilowniaI = {
                             { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                         ]
                     },
-                    {
-                        nazwa: 'MIESIĘCZNY uczeń do 15', cena: '119 zł', wlasciwosci: [
-                            { icon: IconCalendar, text: 'ważny 1 miesiąc' },
-                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-                            { icon: IconClock, text: 'wejście od 0-00 do 15-00' },
-                            { icon: IconInfoCircle, text: 'Uczniowie lub studenci do 26 roku życia' },
-                            { icon: IconLock, text: 'możliwość zablokowania karnetu' }
-                        ]
-                    },
+                    // {
+                    //     nazwa: 'MIESIĘCZNY uczeń do 15', cena: '119 zł', wlasciwosci: [
+                    //         { icon: IconCalendar, text: 'ważny 1 miesiąc' },
+                    //         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+                    //         { icon: IconClock, text: 'wejście od 0-00 do 15-00' },
+                    //         { icon: IconInfoCircle, text: 'Uczniowie lub studenci do 26 roku życia' },
+                    //         { icon: IconLock, text: 'możliwość zablokowania karnetu' }
+                    //     ]
+                    // },
                     {
                         nazwa: '2 TYGODNIE', cena: '100 zł', wlasciwosci: [
                             { icon: IconCalendar, text: 'ważny 2 tygodnie' },
