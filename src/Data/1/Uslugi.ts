@@ -12,7 +12,7 @@ import { IconMoodSadSquint } from "@tabler/icons-react";
 
 // ----------Level 3---------------------------
 
-type Strefy = { [key in 'wolneCiezary' | 'maszynyZeStosem' | 'cardio' | 'rozgrzewka' | 'rollmasazIPlatformaWibrujaca' | 'cross' | 'rrollmasazIPlatformaWibrujaca']: StrefaI };
+type Strefy = { [key in 'wolneCiezary' | 'maszynyZeStosem' | 'cardio' | 'rozgrzewka' | 'rollmasazIPlatformaWibrujaca' | 'cross']: StrefaI };
 
 export const strefy: Strefy = {
     wolneCiezary: {
@@ -57,15 +57,6 @@ export const strefy: Strefy = {
         kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showTitle=1&showNav=0&showPrint=0&showTabs=0&mode=WEEK&showCalendars=0&showTz=0&title=Dost%C4%99pno%C5%9B%C4%87%20sali&src=MWt1M280MjcyZnVvMWg2bDFjY200cGJsYW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=azJsbjN0Z3B0cTZrNmFubXY2amZrczNzbW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23795548&color=%23D50000'
     },
     rollmasazIPlatformaWibrujaca: {
-        nazwa: "Rollmasaż i platforma wibrująca",
-        opis: "Popularnie nazywana rolką, to bęben z rolek drewnianych, który obracając się wykonuje ruch masujący ciało. Bęben, obracając się, drenuje ciało, poprawiając ukrwienie, zwiększając przepływ krwi i limfy. Urządzenie to poprawia przemianę materii, usuwa wodę zbieraną podskórną, likwiduje nierówności skórne, takie jak cellulit, i ma istotny wpływ na spalanie tkanki tłuszczowej. Platforma wibrująca medyczna ma bardzo szerokie zastosowanie. Jest to biomechaniczna stymulacja mięśniowa, która powoduje pracę mięśni, rozgrzewając je, zwiększa ukrwienie, przyspiesza metabolizm i powoduje drenaż limfatyczny ciała. Jest to bardzo dobra metoda fizykalna do treningów osób z problemami narządu ruchu. Dla sportowców i osób aktywnych jest doskonałym uzupełnieniem treningu, poprzez regulację częstotliwości drgań, wywołując pracę mięśni głębokich i powierzchniowych.",
-        media: {
-            thumbnail: 'strefy/rollWibra.png',
-            video: "strefy/rollWibra.mp4"
-        },
-        kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showNav=1&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=MG44bzgwdGk2OTBodmRxZmpmMzY0ZGhjZDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23009688'
-    },
-    rrollmasazIPlatformaWibrujaca: {
         nazwa: "Rollmasaż i platforma wibrująca",
         opis: "Popularnie nazywana rolką, to bęben z rolek drewnianych, który obracając się wykonuje ruch masujący ciało. Bęben, obracając się, drenuje ciało, poprawiając ukrwienie, zwiększając przepływ krwi i limfy. Urządzenie to poprawia przemianę materii, usuwa wodę zbieraną podskórną, likwiduje nierówności skórne, takie jak cellulit, i ma istotny wpływ na spalanie tkanki tłuszczowej. Platforma wibrująca medyczna ma bardzo szerokie zastosowanie. Jest to biomechaniczna stymulacja mięśniowa, która powoduje pracę mięśni, rozgrzewając je, zwiększa ukrwienie, przyspiesza metabolizm i powoduje drenaż limfatyczny ciała. Jest to bardzo dobra metoda fizykalna do treningów osób z problemami narządu ruchu. Dla sportowców i osób aktywnych jest doskonałym uzupełnieniem treningu, poprzez regulację częstotliwości drgań, wywołując pracę mięśni głębokich i powierzchniowych.",
         media: {
@@ -436,7 +427,6 @@ const silownia: SilowniaI = {
                 strefy.maszynyZeStosem,
                 strefy.rozgrzewka,
                 strefy.wolneCiezary,
-                strefy.rrollmasazIPlatformaWibrujaca
                 // strefy.cross,
                 // strefy.rollmasazIPlatformaWibrujaca,
             ],

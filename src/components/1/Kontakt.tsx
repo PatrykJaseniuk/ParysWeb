@@ -41,7 +41,7 @@ export const Kontakt = ({ data }: { data: KontaktI }) => {
 }
 
 
-const social = [{ link: 'https://www.facebook.com/parysnysa?locale=pl_PL', icon: IconBrandFacebook }];
+const social = [{ link: 'https://www.facebook.com/parysnysa?locale=pl_PL', icon: IconBrandFacebook }, { link: 'https://www.instagram.com/silownia_parys/', icon: IconBrandInstagram }];
 
 export function OpcjeKontaktowe({ data }: { data: OpcjaKontaktowaI[] }) {
     const items = data.map((item, index) => <OpcjaKontaktowa key={index} data={item} />);
