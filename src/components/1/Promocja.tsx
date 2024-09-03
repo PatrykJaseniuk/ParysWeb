@@ -1,4 +1,4 @@
-import { Card, Image, Divider, List, ListItem, Modal, Title, Text, Button, Center } from "@mantine/core"
+import { Card, Image, Divider, List, ListItem, Modal, Title, Text, Button, Center, Stack } from "@mantine/core"
 import { useDisclosure } from "@mantine/hooks"
 import { IconCalendar, IconInfinity, IconClock, IconInfoCircle, IconLock } from "@tabler/icons-react"
 
@@ -7,6 +7,7 @@ import { Video } from "./Uslugi/SekcjaUslugi"
 import Fireworks from "@fireworks-js/react"
 import { Kalendaz } from "./Kalendarz"
 import { zajeciaGrupowe } from "@/src/Data/1/ZajeciaGrupowe"
+import { zajeciaIndywidualne } from "@/src/Data/1/ZajeciaIndywidualne"
 
 export const Promocja = () => {
 
@@ -53,7 +54,14 @@ export const Promocja = () => {
                 <Text mt="2" size="xl"> Zapraszamy na nowe zajęcia grupowe.</Text>
 
 
-                <Center p={'1em'}><Button onClick={toggle}> OK</Button></Center>
+
+                <Center p={'1em'}>
+                    <Stack>
+                        <Kalendaz data={zajeciaGrupowe.kalendarzUrl} />
+                        <Button onClick={toggle}> OK</Button>
+                    </Stack>
+
+                </Center>
 
 
 

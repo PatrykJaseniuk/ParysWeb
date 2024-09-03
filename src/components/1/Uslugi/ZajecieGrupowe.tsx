@@ -94,7 +94,7 @@ const ZajecieModal = ({ data, opened, onClose }: { data: ZajecieI, opened: boole
                 </video>
 
                 <Text size="md" style={{ marginBottom: theme.spacing.xs }}>{data.description}</Text>
-                <Kalendaz data={data.kalendazUrl} />
+                {data.kalendazUrl && <Kalendaz data={data.kalendazUrl} />}
             </div>
         </Modal>
     );

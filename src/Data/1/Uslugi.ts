@@ -291,81 +291,81 @@ const silownia: SilowniaI = {
             ],
             czyDostepneZajeciaGrupowe: true,
         },
-        {
-            nazwa: '4 strefy + zajęcia grupowe',
-            cennik: {
-                wlasciwosciWspolne: [
-                    { icon: IconFreedom, text: 'Brak umów płatniczych' },
-                    { icon: IconInfoCircle, text: 'wpisowe 15zł' },
-                ],
-                ceny: [
-                    {
-                        cena: '35 zł',
-                        nazwa: 'JEDNORAZOWY',
-                        wlasciwosci: [
-                            { icon: IconDoorEnter, text: 'jedno wejście' },
+        // {
+        //     nazwa: '4 strefy + zajęcia grupowe',
+        //     cennik: {
+        //         wlasciwosciWspolne: [
+        //             { icon: IconFreedom, text: 'Brak umów płatniczych' },
+        //             { icon: IconInfoCircle, text: 'wpisowe 15zł' },
+        //         ],
+        //         ceny: [
+        //             {
+        //                 cena: '35 zł',
+        //                 nazwa: 'JEDNORAZOWY',
+        //                 wlasciwosci: [
+        //                     { icon: IconDoorEnter, text: 'jedno wejście' },
 
-                        ],
-                    },
-                    {
-                        nazwa: 'MIESIĘCZNY', cena: '160 zł', wlasciwosci: [
-                            { icon: IconCalendar, text: 'ważny 1 miesiąc' },
-                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
-                            { icon: IconLock, text: 'możliwość zablokowania karnetu' }
-                        ]
-                    },
-                    {
-                        nazwa: '2 TYGODNIE', cena: '120 zł', wlasciwosci: [
-                            { icon: IconCalendar, text: 'ważny 2 tygodnie' },
-                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
-                        ]
-                    },
-                    {
-                        nazwa: '10 WEJŚĆ', cena: '150 zł', wlasciwosci: [
-                            { icon: IconCalendar, text: 'ważny 2 miesiące' },
-                            { icon: IconDoorEnter, text: '10 wejść' },
-                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
+        //                 ],
+        //             },
+        //             {
+        //                 nazwa: 'MIESIĘCZNY', cena: '160 zł', wlasciwosci: [
+        //                     { icon: IconCalendar, text: 'ważny 1 miesiąc' },
+        //                     { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
+        //                     { icon: IconLock, text: 'możliwość zablokowania karnetu' }
+        //                 ]
+        //             },
+        //             {
+        //                 nazwa: '2 TYGODNIE', cena: '120 zł', wlasciwosci: [
+        //                     { icon: IconCalendar, text: 'ważny 2 tygodnie' },
+        //                     { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
+        //                 ]
+        //             },
+        //             {
+        //                 nazwa: '10 WEJŚĆ', cena: '150 zł', wlasciwosci: [
+        //                     { icon: IconCalendar, text: 'ważny 2 miesiące' },
+        //                     { icon: IconDoorEnter, text: '10 wejść' },
+        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
 
-                        ]
-                    },
-                    {
-                        nazwa: 'ROCZNY', cena: '1600 zł', wlasciwosci: [
-                            { icon: IconCalendar, text: 'ważny 12 miesięcy' },
-                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
-                            { icon: IconGift, text: 'dwa miesiące gratis' },
-                            { icon: IconLock, text: 'możliwość zablokowania karnetu' }
-                        ]
-                    },
-                    {
-                        imgSrc: 'zasoby/multisport.png', nazwa: '', cena: '', wlasciwosci: [
-                            { icon: IconClock, text: 'dostęp w godzinach otwarcia recepcji' },
-                        ]
-                    },
-                    {
-                        imgSrc: 'zasoby/medicover.png', nazwa: '', cena: '', wlasciwosci: [
-                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
-                        ]
-                    },
-                    {
-                        imgSrc: 'zasoby/fitProfit.png', nazwa: '', cena: '', wlasciwosci: [
-                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
-                        ]
-                    },
-                ]
-            },
-            dostepneStrefy: [
-                strefy.cardio,
-                strefy.maszynyZeStosem,
-                strefy.rozgrzewka,
-                strefy.wolneCiezary,
-                // strefy.cross,
-                // strefy.rollmasazIPlatformaWibrujaca,
-            ],
-            czyDostepneZajeciaGrupowe: true
-        },
+        //                 ]
+        //             },
+        //             {
+        //                 nazwa: 'ROCZNY', cena: '1600 zł', wlasciwosci: [
+        //                     { icon: IconCalendar, text: 'ważny 12 miesięcy' },
+        //                     { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
+        //                     { icon: IconGift, text: 'dwa miesiące gratis' },
+        //                     { icon: IconLock, text: 'możliwość zablokowania karnetu' }
+        //                 ]
+        //             },
+        //             {
+        //                 imgSrc: 'zasoby/multisport.png', nazwa: '', cena: '', wlasciwosci: [
+        //                     { icon: IconClock, text: 'dostęp w godzinach otwarcia recepcji' },
+        //                 ]
+        //             },
+        //             {
+        //                 imgSrc: 'zasoby/medicover.png', nazwa: '', cena: '', wlasciwosci: [
+        //                     { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+        //                 ]
+        //             },
+        //             {
+        //                 imgSrc: 'zasoby/fitProfit.png', nazwa: '', cena: '', wlasciwosci: [
+        //                     { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+        //                 ]
+        //             },
+        //         ]
+        //     },
+        //     dostepneStrefy: [
+        //         strefy.cardio,
+        //         strefy.maszynyZeStosem,
+        //         strefy.rozgrzewka,
+        //         strefy.wolneCiezary,
+        //         // strefy.cross,
+        //         // strefy.rollmasazIPlatformaWibrujaca,
+        //     ],
+        //     czyDostepneZajeciaGrupowe: true
+        // },
         {
             nazwa: '4 strefy + zajęcia grupowe',
             cennik: {
