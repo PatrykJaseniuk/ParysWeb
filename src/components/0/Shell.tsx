@@ -63,12 +63,15 @@ export const Shell = ({ data }: { data: SiteI }) => {
 
 
     return (
-        <div>
-            {/* <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
-            /> */}
-            <Promocja />
+        <div>            {
+            (() => {
+                const dataDo = new Date('2024-10-01')
+                const teraz = new Date();
+
+                return dataDo > teraz && <Promocja />
+            })()
+        }
+            {/* <Promocja /> */}
             {isMobile ?
                 <MobileShell data={elementsForNavigation}> {compponentsForMain} </MobileShell>
                 :
