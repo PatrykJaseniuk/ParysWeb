@@ -12,7 +12,7 @@ import { IconMoodSadSquint } from "@tabler/icons-react";
 
 // ----------Level 3---------------------------
 
-type Strefy = { [key in 'wolneCiezary' | 'maszynyZeStosem' | 'cardio' | 'rozgrzewka' | 'rollmasazIPlatformaWibrujaca' | 'cross']: StrefaI };
+type Strefy = { [key in 'wolneCiezary' | 'maszynyZeStosem' | 'cardio' | 'rozgrzewka' | 'rollmasazIPlatformaWibrujaca' | 'cross' | 'rrollmasazIPlatformaWibrujaca']: StrefaI };
 
 export const strefy: Strefy = {
     wolneCiezary: {
@@ -57,6 +57,15 @@ export const strefy: Strefy = {
         kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showTitle=1&showNav=0&showPrint=0&showTabs=0&mode=WEEK&showCalendars=0&showTz=0&title=Dost%C4%99pno%C5%9B%C4%87%20sali&src=MWt1M280MjcyZnVvMWg2bDFjY200cGJsYW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=azJsbjN0Z3B0cTZrNmFubXY2amZrczNzbW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23795548&color=%23D50000'
     },
     rollmasazIPlatformaWibrujaca: {
+        nazwa: "Rollmasaż i platforma wibrująca",
+        opis: "Popularnie nazywana rolką, to bęben z rolek drewnianych, który obracając się wykonuje ruch masujący ciało. Bęben, obracając się, drenuje ciało, poprawiając ukrwienie, zwiększając przepływ krwi i limfy. Urządzenie to poprawia przemianę materii, usuwa wodę zbieraną podskórną, likwiduje nierówności skórne, takie jak cellulit, i ma istotny wpływ na spalanie tkanki tłuszczowej. Platforma wibrująca medyczna ma bardzo szerokie zastosowanie. Jest to biomechaniczna stymulacja mięśniowa, która powoduje pracę mięśni, rozgrzewając je, zwiększa ukrwienie, przyspiesza metabolizm i powoduje drenaż limfatyczny ciała. Jest to bardzo dobra metoda fizykalna do treningów osób z problemami narządu ruchu. Dla sportowców i osób aktywnych jest doskonałym uzupełnieniem treningu, poprzez regulację częstotliwości drgań, wywołując pracę mięśni głębokich i powierzchniowych.",
+        media: {
+            thumbnail: 'strefy/rollWibra.png',
+            video: "strefy/rollWibra.mp4"
+        },
+        kalendarz: 'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FWarsaw&showNav=1&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=MG44bzgwdGk2OTBodmRxZmpmMzY0ZGhjZDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23009688'
+    },
+    rrollmasazIPlatformaWibrujaca: {
         nazwa: "Rollmasaż i platforma wibrująca",
         opis: "Popularnie nazywana rolką, to bęben z rolek drewnianych, który obracając się wykonuje ruch masujący ciało. Bęben, obracając się, drenuje ciało, poprawiając ukrwienie, zwiększając przepływ krwi i limfy. Urządzenie to poprawia przemianę materii, usuwa wodę zbieraną podskórną, likwiduje nierówności skórne, takie jak cellulit, i ma istotny wpływ na spalanie tkanki tłuszczowej. Platforma wibrująca medyczna ma bardzo szerokie zastosowanie. Jest to biomechaniczna stymulacja mięśniowa, która powoduje pracę mięśni, rozgrzewając je, zwiększa ukrwienie, przyspiesza metabolizm i powoduje drenaż limfatyczny ciała. Jest to bardzo dobra metoda fizykalna do treningów osób z problemami narządu ruchu. Dla sportowców i osób aktywnych jest doskonałym uzupełnieniem treningu, poprzez regulację częstotliwości drgań, wywołując pracę mięśni głębokich i powierzchniowych.",
         media: {
@@ -357,7 +366,82 @@ const silownia: SilowniaI = {
             ],
             czyDostepneZajeciaGrupowe: true
         },
+        {
+            nazwa: '40 strefy + zajęcia grupowe',
+            cennik: {
+                wlasciwosciWspolne: [
+                    { icon: IconFreedom, text: 'Brak umów płatniczych' },
+                    { icon: IconInfoCircle, text: 'wpisowe 15zł' },
+                ],
+                ceny: [
+                    {
+                        cena: '35 zł',
+                        nazwa: 'JEDNORAZOWY',
+                        wlasciwosci: [
+                            { icon: IconDoorEnter, text: 'jedno wejście' },
 
+                        ],
+                    },
+                    {
+                        nazwa: 'MIESIĘCZNY', cena: '160 zł', wlasciwosci: [
+                            { icon: IconCalendar, text: 'ważny 1 miesiąc' },
+                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                            { icon: IconLock, text: 'możliwość zablokowania karnetu' }
+                        ]
+                    },
+                    {
+                        nazwa: '2 TYGODNIE', cena: '120 zł', wlasciwosci: [
+                            { icon: IconCalendar, text: 'ważny 2 tygodnie' },
+                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                        ]
+                    },
+                    {
+                        nazwa: '10 WEJŚĆ', cena: '150 zł', wlasciwosci: [
+                            { icon: IconCalendar, text: 'ważny 2 miesiące' },
+                            { icon: IconDoorEnter, text: '10 wejść' },
+                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
+
+                        ]
+                    },
+                    {
+                        nazwa: 'ROCZNY', cena: '1600 zł', wlasciwosci: [
+                            { icon: IconCalendar, text: 'ważny 12 miesięcy' },
+                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                            { icon: IconGift, text: 'dwa miesiące gratis' },
+                            { icon: IconLock, text: 'możliwość zablokowania karnetu' }
+                        ]
+                    },
+                    {
+                        imgSrc: 'zasoby/multisport.png', nazwa: '', cena: '', wlasciwosci: [
+                            { icon: IconClock, text: 'dostęp w godzinach otwarcia recepcji' },
+                        ]
+                    },
+                    {
+                        imgSrc: 'zasoby/medicover.png', nazwa: '', cena: '', wlasciwosci: [
+                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                        ]
+                    },
+                    {
+                        imgSrc: 'zasoby/fitProfit.png', nazwa: '', cena: '', wlasciwosci: [
+                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                        ]
+                    },
+                ]
+            },
+            dostepneStrefy: [
+                strefy.cardio,
+                strefy.maszynyZeStosem,
+                strefy.rozgrzewka,
+                strefy.wolneCiezary,
+                strefy.rrollmasazIPlatformaWibrujaca
+                // strefy.cross,
+                // strefy.rollmasazIPlatformaWibrujaca,
+            ],
+            czyDostepneZajeciaGrupowe: true
+        },
     ],
     wszystkieStrefy: Object.keys(strefy).map((key) => strefy[key as keyof Strefy]),
     wszystkieZajeciaGrupowe: zajeciaGrupowe.zajecia

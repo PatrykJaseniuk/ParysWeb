@@ -5,6 +5,7 @@ import { useDisclosure } from "@mantine/hooks"
 import { ZajeciaGrupoweI, ZajecieI } from "@/src/interface/1/ZajeciaGrupowe"
 import { SectionI } from "@/src/interface/1/Section"
 import { Kalendaz } from "./Kalendarz"
+import { Video } from "./Uslugi/SekcjaUslugi"
 
 export const SekcjaZajeciaGrupowe = ({ data }: { data: SectionI<ZajeciaGrupoweI> }) => {
     return (
@@ -17,11 +18,24 @@ export const SekcjaZajeciaGrupowe = ({ data }: { data: SectionI<ZajeciaGrupoweI>
 const ZajeciaGrupowe = ({ data }: { data: ZajeciaGrupoweI }) => {
 
     return (
-        <>
-            {data.zajecia.map((zajecie) =>
-                <Zajecie data={zajecie} />
-            )}
-        </>
+        <Container size={'xl'} my={'xl'}>
+            <Stack>
+
+                <Kalendaz data={data.kalendarzUrl} />
+
+
+                {data.zajecia.map((zajecie) =>
+                    <Zajecie key={zajecie.title} data={zajecie} />
+                )}
+
+
+
+            </Stack>
+
+        </Container>
+
+
+
     )
 
 }
@@ -39,9 +53,15 @@ const Zajecie = ({ data }: { data: ZajecieI }) => {
                     <Text>
                         {data.description}
                     </Text>
-                    <Kalendaz data={data.kalendazUrl} />
+                    {data.kalendazUrl && <Kalendaz data={data.kalendazUrl} />}
                 </Stack>
-                <Image alt={data.title} loading="lazy" radius={'xl'} width={'100%'} height={'auto'} src={data.imgSrc} />
+                {data.videoSrc &&
+                    <Video src={data.videoSrc} />
+                    ||
+                    data.imgSrc &&
+                    <Image alt={data.title} loading="lazy" radius={'xl'} width={'100%'} height={'auto'} src={data.imgSrc} />
+                }
+
             </SimpleGrid>
             <Divider size={'xl'} m={"xl"} />
         </Container>

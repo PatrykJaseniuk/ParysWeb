@@ -25,18 +25,13 @@ export const zajeciaIndywidualne: ZajeciaIndywidualneI = {
             imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
         },
         {
-            name: 'Robert',
-            description: 'Trener osobisty, masażysta',
-            imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
-        },
-        {
             name: 'Rafał',
             description: 'Trener osobisty',
             imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
         },
         {
-            name: 'Adam',
-            description: 'Trener osobisty',
+            name: 'Andrzej',
+            description: 'Trener boksu',
             imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png'
         },
     ]

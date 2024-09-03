@@ -10,16 +10,16 @@ import { useEffect } from 'react';
 
 export default function HomePage() {
 
-  const isLargeScreen = useMediaQuery(`(min-width: 1000px)`);
-  const isMiddleScreen = useMediaQuery(`(min-width: 800px)`);
+  // const isLargeScreen = useMediaQuery(`(min-width: 1000px)`);
+  // const isMiddleScreen = useMediaQuery(`(min-width: 800px)`);
 
-  const size = isLargeScreen ? 'lg' : isMiddleScreen ? 'md' : 'sm';
-  const scale = {
-    sm: 0.6,
-    md: 0.8,
-    lg: 1
-  }
-  const scaleValue = scale[size];
+  // const size = isLargeScreen ? 'lg' : isMiddleScreen ? 'md' : 'sm';
+  // const scale = {
+  //   sm: 0.6,
+  //   md: 0.8,
+  //   lg: 1
+  // }
+  // const scaleValue = scale[size];
   return (
     <MantineProvider theme={generateTheme()}>
       {/* <Site siteData={site} /> */}

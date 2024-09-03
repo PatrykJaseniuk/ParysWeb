@@ -4,4 +4,4 @@
 
 1. Naprawić pasek menu
 2. Dodać aktualności 
-3. 
+3. 🥊

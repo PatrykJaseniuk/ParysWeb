@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const Kontakt = ({ data }: { data: KontaktI }) => {
     const icons = social.map((social, index) => (
-        <Link title="facebook" href={social.link}>
+        <Link key={index} title="facebook" href={social.link}>
             <ActionIcon title="facebook" key={index} size={60} variant="transparent">
                 <social.icon size="3rem" stroke={1.5} />
             </ActionIcon>

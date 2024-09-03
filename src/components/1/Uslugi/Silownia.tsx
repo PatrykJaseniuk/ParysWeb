@@ -56,8 +56,9 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
                     />
                     :
                     <Group>
-                        {data.karnety.map((karnet) =>
+                        {data.karnety.map((karnet, index) =>
                             <Button
+                                key={index}
                                 variant={karnet.nazwa == aktywnyKarnetNazwa ? 'filled' : 'light'}
                                 color={karnet.nazwa == aktywnyKarnetNazwa ? aktywnyKarnetKolor.kolor : 'gray'}
                                 onClick={() => setAktywnyKarnetNazwa(karnet.nazwa)} >{karnet.nazwa}
@@ -69,21 +70,22 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
 
                 <Text>strefy </Text>
                 <SimpleGrid cols={{ base: 2, md: 3 }}>
-                    {data.wszystkieStrefy.map((strefa) => {
+                    {data.wszystkieStrefy.map((strefa, index) => {
                         const isActive = aktywnyKarnetKolor.karnet.dostepneStrefy.find((strefaAktywnegoKarnetu) =>
                             strefaAktywnegoKarnetu === strefa
                         ) != undefined;
 
                         return (
-                            <Strefa isActive={isActive} data={strefa} kolor={aktywnyKarnetKolor.kolor} />
+                            <Strefa key={index} isActive={isActive} data={strefa} kolor={aktywnyKarnetKolor.kolor} />
                         )
                     })}
                 </SimpleGrid>
 
                 <Text>zajęcia grupowe</Text>
                 <SimpleGrid cols={{ base: 2, md: 3 }}>
-                    {data.wszystkieZajeciaGrupowe.map((zajecie) =>
+                    {data.wszystkieZajeciaGrupowe.map((zajecie, index) =>
                         <ZajecieGrupowe
+                            key={index}
                             data={zajecie}
                             isActive={aktywnyKarnetKolor.karnet.czyDostepneZajeciaGrupowe}
                             kolor={aktywnyKarnetKolor.kolor}

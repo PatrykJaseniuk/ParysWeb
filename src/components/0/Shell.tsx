@@ -16,10 +16,6 @@ import { WithContext, BreadcrumbList } from "schema-dts";
 
 type ElementsForNavigation = { name: string, scroll: () => void }[]
 
-
-
-
-
 export const Shell = ({ data }: { data: SiteI }) => {
 
     const isMobile = useMediaQuery('(max-width: 1000px)', true);
@@ -31,7 +27,6 @@ export const Shell = ({ data }: { data: SiteI }) => {
         aktualnosci: { content: <SekcjaAktualnosci data={data.aktualnosci.content} />, name: data.aktualnosci.nazwa },
         kontakt: { content: <Kontakt data={data.kontakt.content} />, name: data.kontakt.nazwa },
     }
-
 
     const elementsWithScrollIntoView =
         Object.keys(site).map((key) => {
@@ -53,59 +48,27 @@ export const Shell = ({ data }: { data: SiteI }) => {
         .filter((element) => element.name)
 
 
-    const elementsForMain = elementsWithScrollIntoView.map((element) => ({
-        content: element.content,
-        targetRef: element.scrollIntoView.targetRef,
-        id: element.name
-    }))
+    // const elementsForMain = elementsWithScrollIntoView.map((element) => ({
+    //     content: element.content,
+    //     targetRef: element.scrollIntoView.targetRef,
+    //     id: element.name
+    // }))
 
-    const compponentsForMain = elementsForMain.map((element) =>
-        <div id={element.id} ref={element.targetRef}>{element.content}</div>)
+    const compponentsForMain = elementsWithScrollIntoView.map((element, index) =>
+        <div key={index} ref={element.scrollIntoView.targetRef}>{element.content}</div>)
 
 
     // compponentsForMain.push(<Promocja />)
 
 
-    const breadcrumbList: WithContext<BreadcrumbList> = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement':
-            //  [
-            //     {
-            //         '@type': 'ListItem',
-            //         'position': 1,
-            //         'item': {
-            //             '@id': 'https://parys.nysa.pl/',
-            //             'name': 'Strona główna'
-            //         }
-            //     },
-            //     {
-            //         '@type': 'ListItem',
-            //         'position': 2,
-            //         'item': {
-            //             '@id': 'https://parys.nysa.pl/sport',
-            //             'name': 'Dział Sportowy'
-            //         }
-            //     }
-            //     // Możesz dodać więcej elementów
-            // ]
-            elementsForNavigation.map((element, index) => ({
-                '@type': 'ListItem',
-                'position': index,
-                'name': element.name,
-                'item': `https://parys.nysa.pl#${element.name}`
-            }))
-    };
-
-
 
     return (
         <div>
-            <script
+            {/* <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
-            />
-
+            /> */}
+            <Promocja />
             {isMobile ?
                 <MobileShell data={elementsForNavigation}> {compponentsForMain} </MobileShell>
                 :
