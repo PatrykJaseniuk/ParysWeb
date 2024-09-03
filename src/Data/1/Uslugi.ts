@@ -367,7 +367,7 @@ const silownia: SilowniaI = {
             czyDostepneZajeciaGrupowe: true
         },
         {
-            nazwa: '40 strefy + zajęcia grupowe',
+            nazwa: '4 strefy + zajęcia grupowe',
             cennik: {
                 wlasciwosciWspolne: [
                     { icon: IconFreedom, text: 'Brak umów płatniczych' },
