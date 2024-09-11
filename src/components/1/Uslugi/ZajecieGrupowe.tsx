@@ -1,6 +1,6 @@
 import { StrefaI } from "@/src/interface/1/Uslugi";
 import { ZajecieI } from "@/src/interface/1/ZajeciaGrupowe";
-import { useMantineTheme, Card, Image, Text, Modal, DefaultMantineColor } from "@mantine/core";
+import { useMantineTheme, Card, Image, Text, Modal, DefaultMantineColor, UnstyledButton } from "@mantine/core";
 import { useState } from "react";
 import { Kalendaz } from "../Kalendarz";
 
@@ -41,23 +41,24 @@ export const ZajecieGrupowe = ({ data, isActive, kolor }: { data: ZajecieI, isAc
     const [modalOpened, setModalOpened] = useState(false);
     return (
         <>
-            <Card
-                shadow={cardStyle.shadow}
-                p="lg"
-                style={{ ...cardBaseStyle, opacity: cardStyle.opacity, filter: cardStyle.filter, borderColor: cardStyle.borderColor }}
-                onClick={() => setModalOpened(true)}
-            >
-                <Card.Section>
+            <UnstyledButton onClick={() => setModalOpened(true)}>
+                <Card
+                    shadow={cardStyle.shadow}
+                    p="lg"
+                    style={{ ...cardBaseStyle, opacity: cardStyle.opacity, filter: cardStyle.filter, borderColor: cardStyle.borderColor }}
+                >
+                    <Card.Section>
 
-                    <Image alt={data.title} loading="lazy" src={data.imgSrc} width="100%" />
-                </Card.Section>
-                <Text size="md" style={{ marginTop: theme.spacing.sm }}>
-                    {data.title}
-                </Text>
-                {/* <Text size="sm" style={{ color: isActive ? theme.colors.gray[6] : 'lightgray' }}>
+                        <Image alt={data.title} loading="lazy" src={data.imgSrc} width="100%" />
+                    </Card.Section>
+                    <Text size="md" style={{ marginTop: theme.spacing.sm }}>
+                        {data.title}
+                    </Text>
+                    {/* <Text size="sm" style={{ color: isActive ? theme.colors.gray[6] : 'lightgray' }}>
                     {data.opis}
                 </Text> */}
-            </Card>
+                </Card>
+            </UnstyledButton>
             <ZajecieModal data={data} opened={modalOpened} onClose={() => setModalOpened(false)} />
         </>
     );

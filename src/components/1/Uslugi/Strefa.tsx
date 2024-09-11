@@ -1,5 +1,5 @@
 import { StrefaI } from "@/src/interface/1/Uslugi";
-import { useMantineTheme, Card, Image, Text, Modal, DefaultMantineColor } from "@mantine/core";
+import { useMantineTheme, Card, Image, Text, Modal, DefaultMantineColor, UnstyledButton } from "@mantine/core";
 import { useState } from "react";
 import { Kalendaz } from "../Kalendarz";
 
@@ -40,19 +40,20 @@ export const Strefa = ({ data, isActive, kolor }: { data: StrefaI, isActive: boo
     const [modalOpened, setModalOpened] = useState(false);
     return (
         <>
-            <Card
-                shadow={cardStyle.shadow}
-                // p="lg"
-                style={{ ...cardBaseStyle, opacity: cardStyle.opacity, filter: cardStyle.filter, borderColor: cardStyle.borderColor }}
-                onClick={() => setModalOpened(true)}
-            >
-                <Card.Section>
-                    <Image alt={data.nazwa} loading="lazy" src={data.media.thumbnail} width="100%" />
-                </Card.Section>
-                <Text size="md" style={{ marginTop: theme.spacing.sm }}>
-                    {data.nazwa}
-                </Text>
-            </Card>
+            <UnstyledButton onClick={() => setModalOpened(true)}>
+                <Card
+                    shadow={cardStyle.shadow}
+                    // p="lg"
+                    style={{ ...cardBaseStyle, opacity: cardStyle.opacity, filter: cardStyle.filter, borderColor: cardStyle.borderColor }}
+                >
+                    <Card.Section>
+                        <Image alt={data.nazwa} loading="lazy" src={data.media.thumbnail} width="100%" />
+                    </Card.Section>
+                    <Text size="md" style={{ marginTop: theme.spacing.sm }}>
+                        {data.nazwa}
+                    </Text>
+                </Card>
+            </UnstyledButton>
             <StrefaModal data={data} opened={modalOpened} onClose={() => setModalOpened(false)} />
         </>
     );
