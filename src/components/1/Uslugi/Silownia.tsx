@@ -36,7 +36,6 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
     const aktywnyKarnetKolor = (karnetyKolory.find((karnetKolor) => karnetKolor.karnet.nazwa == aktywnyKarnetNazwa) || karnetyKolory[0]) as KarnetKolorI;
     return (
         <Container size={"xl"}>
-
             <Stack>
                 <Title order={2}>
                     <Text inherit >
@@ -87,7 +86,7 @@ export const Silownia = ({ data }: { data: SilowniaI }) => {
                         <ZajecieGrupowe
                             key={index}
                             data={zajecie}
-                            isActive={aktywnyKarnetKolor.karnet.czyDostepneZajeciaGrupowe}
+                            isActive={aktywnyKarnetKolor.karnet.dostepneZajeciaGrupowe.find((zajeciee) => zajeciee === zajecie) != undefined}
                             kolor={aktywnyKarnetKolor.kolor}
                         />
                     )}

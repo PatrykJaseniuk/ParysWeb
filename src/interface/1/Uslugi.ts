@@ -18,7 +18,7 @@ export interface SilowniaI {
 export type KarnetI = {
     nazwa: string
     dostepneStrefy: StrefaI[],
-    czyDostepneZajeciaGrupowe: boolean
+    dostepneZajeciaGrupowe: ZajecieGrupoweI[],
     cennik: CennikI,
 }
 

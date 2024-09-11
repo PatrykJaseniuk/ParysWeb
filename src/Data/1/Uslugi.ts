@@ -1,7 +1,7 @@
 import { SilowniaI, StrefaI, UslugaI, UslugiI, } from "@/src/interface/1/Uslugi";
 import { cardio } from "@/src/stories/1/Uslugi/Strefa.stories";
 import { keys } from "@mantine/core";
-import { zajeciaGrupowe } from "./ZajeciaGrupowe";
+import { boks, crossFit, zajeciaGrupowe } from "./ZajeciaGrupowe";
 import { Icon24Hours, IconCalendar, IconChessKing, IconClock, IconDoorEnter, IconFreeRights, IconGif, IconInfinity, IconInfoCircle, IconLock, IconMoodSad, IconMoodSad2, IconMoodSadDizzy, IconMoodSadFilled, IconTableHeart, IconUsersGroup } from "@tabler/icons-react";
 import { IconVerifed } from "../2/Icons/IconVerified";
 import { IconGift } from "@tabler/icons-react";
@@ -110,15 +110,6 @@ const silownia: SilowniaI = {
                             { icon: IconLock, text: 'możliwość zablokowania karnetu' }
                         ]
                     },
-                    // {
-                    //     nazwa: 'MIESIĘCZNY uczeń do 15', cena: '119 zł', wlasciwosci: [
-                    //         { icon: IconCalendar, text: 'ważny 1 miesiąc' },
-                    //         { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-                    //         { icon: IconClock, text: 'wejście od 0-00 do 15-00' },
-                    //         { icon: IconInfoCircle, text: 'Uczniowie lub studenci do 26 roku życia' },
-                    //         { icon: IconLock, text: 'możliwość zablokowania karnetu' }
-                    //     ]
-                    // },
                     {
                         nazwa: '2 TYGODNIE', cena: '100 zł', wlasciwosci: [
                             { icon: IconCalendar, text: 'ważny 2 tygodnie' },
@@ -183,7 +174,7 @@ const silownia: SilowniaI = {
                 // strefy.cross,
                 // strefy.rollmasazIPlatformaWibrujaca,
             ],
-            czyDostepneZajeciaGrupowe: false
+            dostepneZajeciaGrupowe: []
         },
         {
             nazwa: '5 stref',
@@ -236,7 +227,7 @@ const silownia: SilowniaI = {
                 strefy.cross,
                 // strefy.rollmasazIPlatformaWibrujaca,
             ],
-            czyDostepneZajeciaGrupowe: false
+            dostepneZajeciaGrupowe: []
         },
         {
             nazwa: '6 stref + zajęcia grupowe',
@@ -280,85 +271,10 @@ const silownia: SilowniaI = {
                 strefy.cross,
                 strefy.rollmasazIPlatformaWibrujaca,
             ],
-            czyDostepneZajeciaGrupowe: true,
+            dostepneZajeciaGrupowe: [boks, crossFit],
         },
-        // {
-        //     nazwa: '4 strefy + zajęcia grupowe',
-        //     cennik: {
-        //         wlasciwosciWspolne: [
-        //             { icon: IconFreedom, text: 'Brak umów płatniczych' },
-        //             { icon: IconInfoCircle, text: 'wpisowe 15zł' },
-        //         ],
-        //         ceny: [
-        //             {
-        //                 cena: '35 zł',
-        //                 nazwa: 'JEDNORAZOWY',
-        //                 wlasciwosci: [
-        //                     { icon: IconDoorEnter, text: 'jedno wejście' },
-
-        //                 ],
-        //             },
-        //             {
-        //                 nazwa: 'MIESIĘCZNY', cena: '160 zł', wlasciwosci: [
-        //                     { icon: IconCalendar, text: 'ważny 1 miesiąc' },
-        //                     { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
-        //                     { icon: IconLock, text: 'możliwość zablokowania karnetu' }
-        //                 ]
-        //             },
-        //             {
-        //                 nazwa: '2 TYGODNIE', cena: '120 zł', wlasciwosci: [
-        //                     { icon: IconCalendar, text: 'ważny 2 tygodnie' },
-        //                     { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
-        //                 ]
-        //             },
-        //             {
-        //                 nazwa: '10 WEJŚĆ', cena: '150 zł', wlasciwosci: [
-        //                     { icon: IconCalendar, text: 'ważny 2 miesiące' },
-        //                     { icon: IconDoorEnter, text: '10 wejść' },
-        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
-
-        //                 ]
-        //             },
-        //             {
-        //                 nazwa: 'ROCZNY', cena: '1600 zł', wlasciwosci: [
-        //                     { icon: IconCalendar, text: 'ważny 12 miesięcy' },
-        //                     { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
-        //                     { icon: Icon24Hours, text: 'całodobowy dostęp' },
-        //                     { icon: IconGift, text: 'dwa miesiące gratis' },
-        //                     { icon: IconLock, text: 'możliwość zablokowania karnetu' }
-        //                 ]
-        //             },
-        //             {
-        //                 imgSrc: 'zasoby/multisport.png', nazwa: '', cena: '', wlasciwosci: [
-        //                     { icon: IconClock, text: 'dostęp w godzinach otwarcia recepcji' },
-        //                 ]
-        //             },
-        //             {
-        //                 imgSrc: 'zasoby/medicover.png', nazwa: '', cena: '', wlasciwosci: [
-        //                     { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
-        //                 ]
-        //             },
-        //             {
-        //                 imgSrc: 'zasoby/fitProfit.png', nazwa: '', cena: '', wlasciwosci: [
-        //                     { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
-        //                 ]
-        //             },
-        //         ]
-        //     },
-        //     dostepneStrefy: [
-        //         strefy.cardio,
-        //         strefy.maszynyZeStosem,
-        //         strefy.rozgrzewka,
-        //         strefy.wolneCiezary,
-        //         // strefy.cross,
-        //         // strefy.rollmasazIPlatformaWibrujaca,
-        //     ],
-        //     czyDostepneZajeciaGrupowe: true
-        // },
         {
-            nazwa: '4 strefy + zajęcia grupowe',
+            nazwa: '4 strefy + cross',
             cennik: {
                 wlasciwosciWspolne: [
                     { icon: IconFreedom, text: 'Brak umów płatniczych' },
@@ -422,6 +338,7 @@ const silownia: SilowniaI = {
                     },
                 ]
             },
+
             dostepneStrefy: [
                 strefy.cardio,
                 strefy.maszynyZeStosem,
@@ -430,8 +347,61 @@ const silownia: SilowniaI = {
                 // strefy.cross,
                 // strefy.rollmasazIPlatformaWibrujaca,
             ],
-            czyDostepneZajeciaGrupowe: true
+            dostepneZajeciaGrupowe: [crossFit]
         },
+        {
+            nazwa: '4 strefy + boks',
+            cennik: {
+                wlasciwosciWspolne: [
+                    { icon: IconFreedom, text: 'Brak umów płatniczych' },
+                    { icon: IconInfoCircle, text: 'wpisowe 15zł' },
+                ],
+                ceny: [
+                    {
+                        cena: '35 zł',
+                        nazwa: 'JEDNORAZOWY',
+                        wlasciwosci: [
+                            { icon: IconDoorEnter, text: 'jedno wejście' },
+
+                        ],
+                    },
+                    {
+                        nazwa: 'MIESIĘCZNY', cena: '160 zł', wlasciwosci: [
+                            { icon: IconCalendar, text: 'ważny 1 miesiąc' },
+                            { icon: IconInfinity, text: 'nieograniczona ilość wejść' },
+                            { icon: Icon24Hours, text: 'całodobowy dostęp' },
+                            { icon: IconLock, text: 'możliwość zablokowania karnetu' }
+                        ]
+                    },
+                    {
+                        imgSrc: 'zasoby/multisport.png', nazwa: '', cena: '', wlasciwosci: [
+                            { icon: IconClock, text: 'dostęp w godzinach otwarcia recepcji' },
+                        ]
+                    },
+                    {
+                        imgSrc: 'zasoby/medicover.png', nazwa: '', cena: '', wlasciwosci: [
+                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                        ]
+                    },
+                    {
+                        imgSrc: 'zasoby/fitProfit.png', nazwa: '', cena: '', wlasciwosci: [
+                            { icon: Icon24Hours, text: 'całodobowy dostęp dla zarejestrowanych klientów' },
+                        ]
+                    },
+                ]
+            },
+
+            dostepneStrefy: [
+                strefy.cardio,
+                strefy.maszynyZeStosem,
+                strefy.rozgrzewka,
+                strefy.wolneCiezary,
+                // strefy.cross,
+                // strefy.rollmasazIPlatformaWibrujaca,
+            ],
+            dostepneZajeciaGrupowe: [boks]
+        },
+
     ],
     wszystkieStrefy: Object.keys(strefy).map((key) => strefy[key as keyof Strefy]),
     wszystkieZajeciaGrupowe: zajeciaGrupowe.zajecia
