@@ -10,6 +10,7 @@ import { generateTheme } from '@/src/theme';
 import { Metadata } from 'next';
 
 import { BreadcrumbList, ListItem, WithContext } from 'schema-dts';
+import { GoogleAnalytics } from '@/src/components/0/GoogleAnalitics';
 
 
 
@@ -45,6 +46,8 @@ export default function RootLayout({ children }: { children: any }) {
 
 
       </head>
+      <GoogleAnalytics />
+
       <body>
         {children}
       </body>

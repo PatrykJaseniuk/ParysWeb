@@ -30,7 +30,7 @@ export const Shell = ({ data }: { data: SiteI }) => {
 
     const elementsWithScrollIntoView =
         Object.keys(site).map((key) => {
-            const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>();
+            const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({ onScrollFinish: () => { console.log('finish') } });
             return {
                 ...site[key as keyof typeof site],
                 scrollIntoView: {
@@ -232,10 +232,6 @@ const SlidingBar = ({ children }: { children: React.ReactNode }) => {
     const ref = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
 
-    useEffect(() => {
-        ref.current && setHeight(ref.current.clientHeight);
-        setWysuniecie(height)
-    }, [height]);
 
     const [{ y: scroll }] = useWindowScroll()
     const [previousScroll, setPreviousScroll] = useState(0);
@@ -249,9 +245,16 @@ const SlidingBar = ({ children }: { children: React.ReactNode }) => {
                 height : noweWysuniecieNavBar < 0 ?
                     0 : noweWysuniecieNavBar;
 
+
         setPreviousScroll(scroll)
         setWysuniecie(ograniczoneWysuniecieNavBar)
     }, [scroll])
+
+    useEffect(() => {
+        ref.current && setHeight(ref.current.clientHeight);
+        setWysuniecie(height)
+        console.log('height', height)
+    }, [height]);
 
     // Improved styling for the navigation bar and buttons
     const mainBarStyle: React.CSSProperties = {

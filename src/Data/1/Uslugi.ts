@@ -1,12 +1,9 @@
 import { SilowniaI, StrefaI, UslugaI, UslugiI, } from "@/src/interface/1/Uslugi";
-import { cardio } from "@/src/stories/1/Uslugi/Strefa.stories";
-import { keys } from "@mantine/core";
 import { boks, crossFit, zajeciaGrupowe } from "./ZajeciaGrupowe";
-import { Icon24Hours, IconCalendar, IconChessKing, IconClock, IconDoorEnter, IconFreeRights, IconGif, IconInfinity, IconInfoCircle, IconLock, IconMoodSad, IconMoodSad2, IconMoodSadDizzy, IconMoodSadFilled, IconTableHeart, IconUsersGroup } from "@tabler/icons-react";
+import { Icon24Hours, IconBooks, IconCalendar, IconClock, IconDoorEnter, IconInfinity, IconInfoCircle, IconLock, IconUsersGroup } from "@tabler/icons-react";
 import { IconVerifed } from "../2/Icons/IconVerified";
 import { IconGift } from "@tabler/icons-react";
 import IconFreedom from "@/src/components/2/IconsParys/IconFreedom";
-import { IconMoodSadSquint } from "@tabler/icons-react";
 
 // definicje pogrupowane w warstwy
 
@@ -401,6 +398,24 @@ const silownia: SilowniaI = {
             ],
             dostepneZajeciaGrupowe: [boks]
         },
+        {
+            nazwa: "Lolo",
+            dostepneStrefy: [strefy.rozgrzewka, strefy.wolneCiezary, strefy.rollmasazIPlatformaWibrujaca],
+            dostepneZajeciaGrupowe: [
+
+            ],
+            cennik: {
+                wlasciwosciWspolne: [],
+                ceny: [{
+                    nazwa: "Karnent Miesięczny",
+                    cena: "1000",
+                    wlasciwosci: [{
+                        icon: IconBooks,
+                        text: "Boks"
+                    }]
+                }]
+            }
+        }
 
     ],
     wszystkieStrefy: Object.keys(strefy).map((key) => strefy[key as keyof Strefy]),
