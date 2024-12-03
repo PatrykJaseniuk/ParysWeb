@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: any }) {
 
 
       </head>
-      <GoogleAnalytics />
+      {/* <GoogleAnalytics /> */}
 
       <body>
         {children}
