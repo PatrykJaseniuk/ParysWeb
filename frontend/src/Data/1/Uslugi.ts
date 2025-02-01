@@ -202,7 +202,6 @@ const silownia: SilowniaI = {
                             { icon: IconCalendar, text: 'ważny 2 miesiące' },
                             { icon: IconDoorEnter, text: '10 wejść' },
                             { icon: Icon24Hours, text: 'całodobowy dostęp' },
-
                         ]
                     },
                     {
