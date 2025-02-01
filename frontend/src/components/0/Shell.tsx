@@ -24,7 +24,7 @@ export const Shell = ({ data }: { data: SiteI }) => {
         uslugi: { content: <SekcjaUslugi data={data.uslugi.content} />, name: data.uslugi.nazwa },
         zajeciaIndywidualne: { content: <SekcjaZajeciaIndywidualne data={data.zajeciaIndywidualne.content} />, name: data.zajeciaIndywidualne.nazwa },
         zajeciaGrupowe: { content: <SekcjaZajeciaGrupowe data={data.zajeciaGrupowe.content} />, name: data.zajeciaGrupowe.nazwa },
-        aktualnosci: { content: <SekcjaAktualnosci data={data.aktualnosci.content} />, name: data.aktualnosci.nazwa },
+        // aktualnosci: { content: <SekcjaAktualnosci data={data.aktualnosci.content} />, name: data.aktualnosci.nazwa },
         kontakt: { content: <Kontakt data={data.kontakt.content} />, name: data.kontakt.nazwa },
     }
 

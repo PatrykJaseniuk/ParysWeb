@@ -17,7 +17,7 @@ export interface SiteI {
     uslugi: LinkableElement<SectionI<UslugiI>>,
     zajeciaIndywidualne: LinkableElement<SectionI<ZajeciaIndywidualneI>>,
     zajeciaGrupowe: LinkableElement<SectionI<ZajeciaGrupoweI>>,
-    aktualnosci: LinkableElement<SectionI<AktualnosciFacebookI>>
+    // aktualnosci: LinkableElement<SectionI<AktualnosciFacebookI>>
     kontakt: LinkableElement<KontaktI>,
     promocja?: PromocjaI
 }
